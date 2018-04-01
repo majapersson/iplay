@@ -1,0 +1,23 @@
+.nav-menu {
+  background-color: $main-background;
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .menu-item, a {
+      color: $main-light;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .current-menu-item a {
+      color: $main-accent;
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+  }
+}

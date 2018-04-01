@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  margin: 2rem 0;
+
+  &__info {
+    padding: 1rem;
+
+    h2, strong {
+      text-transform: uppercase;
+    }
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

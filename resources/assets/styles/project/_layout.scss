@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+
+  @include bp(small) {
+    width: 100%;
+  };
+  @include bp(medium) {
+    width: 80%;
+  };
+  @include bp(large) {
+    width: 60%;
+  };
+  @include bp(x-large) {
+    width: 50%;
+  };
+}

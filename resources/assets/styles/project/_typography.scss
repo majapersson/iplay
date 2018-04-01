@@ -1,0 +1,15 @@
+:root {
+  font-size: 16px;
+}
+
+$font-default: 'Helvetica Neue', 'Segoe UI', sans-serif;
+
+$font-heading: 'Third Rail', $font-default;
+
+body {
+  font-family: $font-default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
