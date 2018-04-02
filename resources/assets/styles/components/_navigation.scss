@@ -2,7 +2,7 @@ header {
   height: 9%;
   background-color: $main-background;
   box-sizing: border-box;
-  border-bottom: 1px solid rgb(103, 103, 103);
+  border-bottom: 1px solid $border-color;
 
   .site-logo {
     height: 100%;
@@ -14,8 +14,6 @@ header {
 
     a {
       height: 100%;
-
-      img {}
     }
   }
 
@@ -28,13 +26,41 @@ header {
     padding: 0.5%;
     box-sizing: border-box;
 
+    .sub-menu {
+      position: absolute;
+      border: 1px solid $border-color;
+      padding: 0.5% 8% 0.5% 0.5%;
+      margin-top: 0.5%;
+      background: $main-background;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: opacity 600ms, visibility 600ms;
+      transition: opacity 600ms, visibility 600ms;
+
+      &:hover {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      li {
+        padding: 5%;
+
+        a {
+          font-size: 18px !important;
+          text-transform: none !important;
+          margin-top: 20px !important;
+        }
+      }
+    }
+
     ul {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
 
-      .page_item a {
+      .menu-item a {
         color: $main-light;
         text-transform: uppercase;
         text-decoration: none;
@@ -44,15 +70,16 @@ header {
         &:hover {
           color: $main-accent;
         }
+
+        &:hover + .sub-menu {
+          visibility: visible;
+          opacity: 1;
+        }
       }
 
       .current_page_item a {
         color: $main-accent;
       }
-    }
-
-    .sub-menu {
-      position: absolute;
     }
 
     .menu {

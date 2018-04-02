@@ -16,7 +16,7 @@
         <a href="home"><img src="<?php bloginfo('template_url'); ?>/assets/images/iplaylogo_white_small.svg" alt=""></a>
         </div>
             <div class="nav-menu">
-                    <?php wp_nav_menu(['theme_location' => 'primary-menu', 'exclude' => '6']); ?>
+                    <?php wp_nav_menu(['theme_location' => 'primary-menu']);?>
                     <div class="get-app-container">
                         <p>Get the app</p>
                     </div>
