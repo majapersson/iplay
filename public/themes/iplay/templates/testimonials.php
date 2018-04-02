@@ -1,11 +1,10 @@
-<?php /* Template Name: Team */
+<?php /* Template Name: Testimonials */
 
 get_header();
 
 $posts = get_posts([
     'numberposts' => '-1',
-    'order' => 'ASC',
-    'post_type' => 'team_member',
+    'post_type' => 'superuser',
 ]); ?>
 <div class="container">
 
@@ -16,7 +15,7 @@ $posts = get_posts([
             <img src="<?php echo $image['url'] ?>" alt="<?php the_title() ?>">
             <div class="user__info">
                 <h2><?php the_title() ?></h2>
-                <p><strong><?php the_field('title') ?></strong></p>
+                <p><strong><?php the_field('team') ?></strong></p>
                 <p><?php the_field('description') ?></p>
             </div>
         </div>
