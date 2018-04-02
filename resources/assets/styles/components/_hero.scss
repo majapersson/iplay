@@ -6,8 +6,15 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  &__heading {
+
+  &__content {
+    @extend .container;
+    text-align: center;
+  }
+  &__title {
+    font-size: 4rem;
   }
   &__text {
+    font-size: 1.8rem;
   }
 }
