@@ -1,0 +1,13 @@
+.hero {
+  background-color: $main-background;
+  color: $main-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  &__heading {
+  }
+  &__text {
+  }
+}

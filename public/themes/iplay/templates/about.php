@@ -6,7 +6,9 @@ $posts = get_posts([
     'numberposts' => '-1',
     'order' => 'ASC',
     'post_type' => 'team_member',
-]); ?>
+]);
+require template_path('templates/hero.php'); ?>
+
 <div class="container">
 
     <?php foreach ($posts as $post):

@@ -5,7 +5,9 @@ get_header();
 $posts = get_posts([
     'numberposts' => '-1',
     'post_type' => 'superuser',
-]); ?>
+]);
+require template_path('templates/hero.php'); ?>
+
 <div class="container">
 
     <?php foreach ($posts as $post):
