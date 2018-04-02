@@ -13,10 +13,10 @@
 
     <header>
         <div class="site-logo">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/iplaylogo_white_small.svg" alt="">
+        <a href="home"><img src="<?php bloginfo('template_url'); ?>/assets/images/iplaylogo_white_small.svg" alt=""></a>
         </div>
             <div class="nav-menu">
-                    <?php wp_nav_menu(['theme_location' => 'primary-menu']); ?>
+                    <?php wp_nav_menu(['theme_location' => 'primary-menu', 'exclude' => '6']); ?>
                     <div class="get-app-container">
                         <p>Get the app</p>
                     </div>
