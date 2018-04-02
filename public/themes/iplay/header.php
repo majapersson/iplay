@@ -12,7 +12,17 @@
 <body <?php body_class(); ?>>
 
     <header>
-        <nav role="navigation">
-            <?php wp_nav_menu(['theme_location' => 'primary-menu']); ?>
-        </nav>
+        <div class="site-logo">
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/iplaylogo_white_small.svg" alt="">
+        </div>
+            <div class="nav-menu">
+                    <?php wp_nav_menu(['theme_location' => 'primary-menu']); ?>
+                    <div class="get-app-container">
+                        <p>Get the app</p>
+                    </div>
+                    <div class="language-container">
+                        <div class="language-icon"></div>
+                    </div>
+            </div>
+
     </header>

@@ -7,10 +7,15 @@
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "build:styles": "node-sass --source-map=none --output-style compressed frontend/styles/sass/index.scss frontend/styles/index.css",
+        "watch:styles": "node-sass -w -r resources/assets/styles/ -o public/themes/iplay/"
     },
     "devDependencies": {
         "cross-env": "^5.1.3",
         "laravel-mix": "^2.0.0"
+    },
+    "dependencies": {
+        "node-sass": "^4.8.3"
     }
 }

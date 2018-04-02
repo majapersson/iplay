@@ -1,3 +1,98 @@
-/**
- * Theme Name: IPLAY
- */
+:root {
+  font-size: 16px; }
+
+body {
+  font-family: "Helvetica Neue", "Segoe UI", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Third Rail", "Helvetica Neue", "Segoe UI", sans-serif; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000; }
+
+.container {
+  margin: auto; }
+  @media (max-width: 767px) {
+    .container {
+      width: 100%; } }
+  @media (max-width: 1250px) {
+    .container {
+      width: 80%; } }
+  @media (min-width: 1250px) {
+    .container {
+      width: 60%; } }
+  @media (min-width: 1600px) {
+    .container {
+      width: 50%; } }
+
+header {
+  height: 9%;
+  background-color: #000000;
+  box-sizing: border-box;
+  border-bottom: 1px solid #676767; }
+  header .site-logo {
+    height: 100%;
+    padding: 1% 1% 1% 2%;
+    box-sizing: border-box;
+    float: left;
+    display: flex;
+    align-items: center; }
+    header .site-logo img {
+      height: 100%; }
+  header .nav-menu {
+    height: 100%;
+    width: 50%;
+    float: right;
+    display: flex;
+    align-items: center;
+    padding: 0.5%;
+    box-sizing: border-box; }
+    header .nav-menu ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      header .nav-menu ul .page_item a {
+        color: #FAFAFA;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px; }
+      header .nav-menu ul .current_page_item a {
+        color: #3FBF55; }
+    header .nav-menu .sub-menu {
+      position: absolute; }
+    header .nav-menu .menu {
+      padding-right: 5%; }
+    header .nav-menu .get-app-container {
+      height: 100%;
+      width: 30%;
+      background: #3FBF55;
+      color: #FAFAFA;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    header .nav-menu .language-container {
+      margin-left: 6%; }
+      header .nav-menu .language-container .language-icon {
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 15px;
+        background-image: url("assets/images/gb.svg");
+        background-position: center;
+        background-size: cover;
+        border: none; }
+
+.user {
+  display: flex;
+  margin: 2rem 0; }
+  .user__info {
+    padding: 1rem; }
+    .user__info h2, .user__info strong {
+      text-transform: uppercase; }
+  .user:nth-child(even) {
+    flex-direction: row-reverse; }
