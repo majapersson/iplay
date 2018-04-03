@@ -6,6 +6,11 @@ body {
   color: $main-light;
 }
 
+.content {
+  background-color: $main-light;
+  padding: 2rem 0;
+}
+
 .container {
   margin: auto;
   @include bp(small) {

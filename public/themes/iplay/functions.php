@@ -5,6 +5,12 @@ declare(strict_types=1);
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
+// Register post types
+require template_path('post-types/index.php');
+
+// Register custom fields
+require template_path('custom-fields/index.php');
+
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Show the admin bar.
@@ -54,3 +60,11 @@ add_filter('excerpt_more', function () {
 add_filter('excerpt_length', function () {
     return 101;
 });
+
+// Functions for translating theme
+load_theme_textdomain('Iplay', '/languages');
+
+$locale = get_locale();
+$locale_file = "/languages/$locale.php";
+if ( is_readable($locale_file) )
+	require_once($locale_file);
