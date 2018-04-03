@@ -51,6 +51,7 @@ $application = new WordPlate\Application(
 */
 
 // define('WP_ALLOW_MULTISITE', env('WP_ALLOW_MULTISITE', true));
+define('WP_MEMORY_LIMIT', '-1');
 
 /*
 |--------------------------------------------------------------------------

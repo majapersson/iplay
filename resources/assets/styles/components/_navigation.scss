@@ -19,12 +19,16 @@ header {
 
   .nav-menu {
     height: 100%;
-    width: 40%;
+    width: 550px;
     float: right;
     display: flex;
     align-items: center;
     padding: 0.5%;
     box-sizing: border-box;
+
+    .menu-menu-1-container {
+      padding-right: 5%;
+    }
 
     .sub-menu {
       position: absolute;
@@ -66,6 +70,10 @@ header {
         text-decoration: none;
         font-size: 20px;
         margin: 10px;
+        @include bp(medium) {
+          font-size: 18px;
+        }
+        @include bp(small) {}
 
         &:hover {
           color: $main-accent;
@@ -82,13 +90,12 @@ header {
       }
     }
 
-    .menu {
-      padding-right: 5%;
-    }
+    .menu {}
 
     .get-app-container {
       height: 100%;
-      width: 30%;
+      width: 160px;
+      min-width: 160px;
       background: $main-accent;
       color: $main-light;
       display: flex;
@@ -97,14 +104,14 @@ header {
     }
 
     .language-container {
-      margin-left: 6%;
+      padding-left: 5%;
 
       .language-icon {
         width: 30px;
         height: 30px;
         border: 1px solid white;
         border-radius: 15px;
-        background-image: url("assets/images/gb.svg");
+        background-image: url("/themes/iplay/assets/images/gb.svg");
         background-position: center;
         background-size: cover;
         border: none;

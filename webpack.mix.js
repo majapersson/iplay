@@ -22,3 +22,4 @@ mix.js('resources/assets/scripts/app.js', 'scripts');
 mix.sass('resources/assets/styles/app.scss', 'styles');
 
 mix.version();
+mix.disableNotifications();
