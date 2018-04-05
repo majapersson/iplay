@@ -38,13 +38,16 @@ add_action('after_setup_theme', function () {
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
-    wp_deregister_script('jquery');
 
     wp_enqueue_style('wordplate', mix('styles/app.css'));
 
     wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
     wp_enqueue_script('wordplate');
 });
+
+
+
+
 
 // Remove JPEG compression.
 add_filter('jpeg_quality', function () {
@@ -66,5 +69,64 @@ load_theme_textdomain('Iplay', '/languages');
 
 $locale = get_locale();
 $locale_file = "/languages/$locale.php";
-if ( is_readable($locale_file) )
-	require_once($locale_file);
+if (is_readable($locale_file)) {
+    require_once($locale_file);
+}
+
+class Iplay
+{
+
+private static $instance;
+
+    public $widgets;
+
+    public static function instance()
+  {
+      if (! isset(self::$instance) && ! (self::$instance instanceof Iplay)) {
+          self::$instance = new self;
+      }
+
+      return self::$instance;
+  }
+
+
+public function __construct()
+    {
+        $this->includes();
+        $this->setup();
+    }
+
+
+
+function includes()
+{
+    $this->files = array(
+            'class-widgets.php',
+            'class-widget.php',
+        );
+
+    foreach ($this->files as $file) {
+        require_once(get_template_directory() . '/widgets/' . $file);
+    }
+}
+
+
+
+
+
+private function setup()
+  {
+      $this->widgets = new Iplay_Widgets();
+
+  }
+
+
+
+
+
+}
+function iplay()
+{
+    return Iplay::instance();
+}
+iplay();
