@@ -23,7 +23,6 @@ require template_path('templates/hero.php'); ?>
                 </div>
             </div>
         <?php endforeach; ?>
-
         <a href="#" class="button">Our developers</a>
     </div>
 </div>

@@ -24,3 +24,7 @@
             </div>
 
     </header>
+    <?php
+    $slug = basename(get_permalink());
+
+    dynamic_sidebar('widget-area-'. $slug .'');

@@ -26,5 +26,4 @@ require template_path('templates/hero.php'); ?>
         <?php endforeach; ?>
     </div>
 </div>
-
 <?php get_footer(); ?>

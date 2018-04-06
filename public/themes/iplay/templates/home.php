@@ -1,5 +1,13 @@
 <?php /* Template Name: Home */
 
-declare(strict_types=1);
 
-require __DIR__.'../../header.php';
+
+get_header();
+
+
+
+
+
+dynamic_sidebar('widget-area-home');
+
+    get_footer();
