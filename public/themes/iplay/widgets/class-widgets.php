@@ -6,7 +6,8 @@ class Iplay_Widgets
     public function __construct()
     {
         $widgets = array(
-          'callout.php',
+            'callout.php',
+          'hero-slider.php',
         );
 
         foreach ($widgets as $widget) {
@@ -21,6 +22,7 @@ class Iplay_Widgets
     public function register_widgets()
     {
         register_widget('Iplay_Widget_Callout');
+        register_widget('Iplay_Widget_Hero_Slider');
     }
 
     public function register_sidebars()

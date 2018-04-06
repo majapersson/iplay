@@ -1,20 +1,31 @@
+header {
+  height: auto !important;
+}
+
 .iplay_widget_callout {
   height: 100%;
+  padding: 5%;
 
   .container {
     height: 100%;
     position: relative;
+    float: left;
 
     h1 {
       font-size: 62px;
+      margin-top: 15%;
+      width: 60%;
     }
 
     .callout-description {
       margin-top: 10%;
-      width: 50%;
+      width: 55%;
 
       h4 {
-        font-size: 20px;
+        font-size: 22px;
+        letter-spacing: 1.08px;
+        line-height: 46px;
+        font-weight: normal;
       }
     }
 

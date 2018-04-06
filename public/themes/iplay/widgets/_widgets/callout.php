@@ -10,7 +10,7 @@ class Iplay_Widget_Callout extends Iplay_Widget
 {
     public function __construct()
     {
-        $this->widget_cssclass    = 'iplay_widget_callout widget-img-grid';
+        $this->widget_cssclass    = 'iplay_widget_callout widget-callout';
         $this->widget_description = __('Display a responsive callout', 'iplay');
         $this->widget_id          = 'iplay_widget_callout';
         $this->widget_name        = __('Iplay - Callout', 'iplay');
