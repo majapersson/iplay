@@ -4,22 +4,33 @@ header {
 
 .iplay_widget_callout {
   height: 100%;
-  padding: 5%;
+  padding: 5% 5% 0;
+  background: #375848;
+  background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
 
   .container {
-    height: 100%;
+    height: 80%;
+    width: 100%;
     position: relative;
     float: left;
+    z-index: 999;
+    display: flex;
+
+    .callout-left-section,
+    .callout-right-section {
+      width: 60%;
+      height: 100%;
+    }
 
     h1 {
       font-size: 62px;
       margin-top: 15%;
-      width: 60%;
+      width: 70%;
     }
 
     .callout-description {
       margin-top: 10%;
-      width: 55%;
+      width: 65%;
 
       h4 {
         font-size: 22px;
@@ -53,6 +64,25 @@ header {
         margin-left: 10%;
         float: right;
         background-image: url("/themes/iplay/assets/images/App-Store.svg");
+      }
+    }
+
+    .callout-left-section {
+      padding-left: 10%;
+    }
+
+    .callout-right-section {
+      padding: 5% 5% 5% 0;
+      width: 40%;
+      box-sizing: border-box;
+
+      .iphone-preview-container {
+        width: 100%;
+        height: 100%;
+        background-image: url("/themes/iplay/assets/images/iplay-phone-mockups.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }

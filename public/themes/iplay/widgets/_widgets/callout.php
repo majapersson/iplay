@@ -63,7 +63,7 @@ class Iplay_Widget_Callout extends Iplay_Widget
     		</style>
 
 <div class="container">
-
+<div class="callout-left-section">
     <h1 class="widget-title widget-title--home"><?php if ($title) {
             echo $title;
         } ?></h1>
@@ -76,6 +76,11 @@ class Iplay_Widget_Callout extends Iplay_Widget
         <div class="google-play"></div>
         <div class="app-store"></div>
     </div>
+    </div>
+    <div class="callout-right-section">
+    <div class="iphone-preview-container"></div>
+    </div>
+</div>
 
   <?php
         echo $after_widget;

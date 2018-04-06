@@ -6,7 +6,7 @@
   overflow: hidden;
 
   .slider-change-container {
-    width: 101%;
+    width: 102%;
     height: 12%;
     display: flex;
 
@@ -46,7 +46,7 @@
     }
 
     .first-button {
-      margin-left: -1%;
+      margin-left: -2%;
 
       &:hover {
         border-right: 10px solid $light-accent;
