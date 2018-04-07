@@ -63,7 +63,7 @@ class Iplay_Widget_Testimonials extends Iplay_Widget
                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $post->post_title ?>">
                 </div>
                 <div class="user__info">
-                    <h2><?php echo $post->post_title ?></h2>
+                    <h3><?php echo $post->post_title ?></h3>
                     <p><strong><?php echo $fields['team'] ?></strong></p>
                     <p><?php echo $fields['description'] ?></p>
                 </div>

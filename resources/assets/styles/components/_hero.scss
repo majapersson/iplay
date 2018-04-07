@@ -11,10 +11,9 @@
     @extend .container;
     text-align: center;
   }
-  &__title {
-    font-size: 4rem;
-  }
   &__text {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.41px;
+    line-height: 2.2rem;
   }
 }
