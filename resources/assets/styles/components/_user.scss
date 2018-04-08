@@ -13,17 +13,9 @@
   &__info {
     padding: 1rem 5vw;
 
-    h3, strong {
-      text-transform: uppercase;
-    }
-
     h3 {
       text-align: left;
-    }
-
-    strong {
-      font-size: 0.8rem;
-      opacity: 0.5;
+      text-transform: uppercase;
     }
   }
 

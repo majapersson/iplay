@@ -1,10 +1,19 @@
 .button {
   background-color: $main-accent;
   border: none;
-  color: $main-light;
   display: inline-block;
   text-decoration: none;
-  text-transform: uppercase;
+  transform: skewX(-20deg);
   padding: 1.5rem;
   width: auto;
+
+  p {
+    color: $main-light;
+    font-family: $font-default;
+    font-size: 1rem;
+    letter-spacing: 1.6px;
+    margin: 0;
+    transform: skewX(20deg);
+    text-transform: uppercase;
+  }
 }
