@@ -102,9 +102,26 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
     <h1 class="widget-title widget-title"><?php if ($title) {
             echo $title;
         } ?></h1>
+        <div class="mockup-text-container">
 <div class="hero-slider-mockup-container"></div>
 <div class="hero-slider-description-container">
-<h4><?php echo wpautop($description); ?></h4>
+<h4><?php echo $description; ?></h4>
+</div>
+</div>
+<div class="hero-slider-icon-container">
+    <div class="hero-slider-left-icons-container">
+        <div class="hero-slider-top-icon-container">
+        <div class="first-icon-contain"></div>
+        <p>Connect with dieticians, mental coaches, agents and more.
+</p>
+        </div>
+        <div class="hero-slider-bottom-icon-container">
+        <div class="second-icon-contain">
+            <p>Shoot pictures, videos and report live from your games.</p>
+        </div>
+        </div>
+    </div>
+    <div class="hero-slider-right-icons-container"></div>
 </div>
 </div>
 

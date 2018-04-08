@@ -15,9 +15,7 @@
         </div>
             <div class="nav-menu">
                     <?php wp_nav_menu(['theme_location' => 'primary-menu']);?>
-                    <div class="get-app-container">
-                        <p>Get the app</p>
-                    </div>
+
                     <div class="language-container">
                         <div class="language-icon"></div>
                     </div>

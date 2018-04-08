@@ -44,23 +44,51 @@
       display: flex;
       align-items: center;
 
-      .app-store,
-      .google-play {
-        height: 80%;
-        width: 40%;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+      .app-store-box,
+      .google-play-box {
+        height: 100%;
+        width: 160px;
+        min-width: 160px;
+        background: $light-accent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-transform: skew(160deg);
+        -moz-transform: skew(160deg);
+        -o-transform: skew(160deg);
+        webkit-backface-visibility: hidden;
+
+        p {
+          transform: skew(-160deg);
+          color: #000000;
+          font-weight: normal;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+        }
+
+        p::before {
+          background-image: url("/themes/iplay/assets/images/google-play.svg");
+          background-size: 25px 25px;
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          content: "";
+          margin-right: 5px;
+        }
       }
 
-      .google-play {
-        background-image: url("/themes/iplay/assets/images/Google_Play.svg");
-      }
-
-      .app-store {
+      .app-store-box {
         margin-left: 10%;
-        float: right;
-        background-image: url("/themes/iplay/assets/images/App-Store.svg");
+
+        p::before {
+          background-image: url("/themes/iplay/assets/images/apple-icon.svg");
+          background-size: 25px 25px;
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          content: "";
+        }
       }
     }
 
