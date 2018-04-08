@@ -11,7 +11,7 @@
 
     <header>
         <div class="site-logo">
-        <a href="home"><img src="<?php bloginfo('template_url'); ?>/assets/images/iplaylogo_white_small.svg" alt=""></a>
+        <a href="home"><img src="<?php bloginfo('template_url'); ?>/assets/images/Iplay-logo-green.svg" alt=""></a>
         </div>
             <div class="nav-menu">
                     <?php wp_nav_menu(['theme_location' => 'primary-menu']);?>
@@ -21,6 +21,25 @@
                     <div class="language-container">
                         <div class="language-icon"></div>
                     </div>
+            </div>
+            <div class="nav-menu-mobile">
+                <label>
+  <input type='checkbox'>
+  <span class='menu'>
+    <span class='hamburger'></span>
+  </span>
+  <ul>
+    <li>
+      <a href='#'>Home</a>
+    </li>
+    <li>
+      <a href='#'>About</a>
+    </li>
+    <li>
+      <a href='#'>Work</a>
+    </li>
+  </ul>
+</label>
             </div>
 
     </header>

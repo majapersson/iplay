@@ -1,7 +1,7 @@
 .widget-hero-slider {
   background: $content-background;
   color: $main-background;
-  height: 100%;
+  height: 120%;
   width: 100%;
   overflow: hidden;
 
@@ -77,6 +77,42 @@
   h1 {
     text-align: center;
     font-size: 48px;
-    margin-top: 5%;
+    margin-top: 1%;
+  }
+
+  .current-slide-container {
+    height: 100%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+
+    .hero-slider-mockup-container {
+      height: 50%;
+      width: 60%;
+      float: left;
+    }
+
+    .hero-slider-description-container {
+      height: 50%;
+      width: 40%;
+      float: right;
+      display: flex;
+      align-items: center;
+      height: 35%;
+      letter-spacing: 0.41px;
+      line-height: 40px;
+
+      h4 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .hero-slider-mockup-container {
+    background-image: url("/themes/iplay/assets/images/two-screen-mockup.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }

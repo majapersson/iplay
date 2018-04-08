@@ -98,13 +98,15 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
             } ?></h3>
         </div>
     </div>
+    <div class="current-slide-container">
     <h1 class="widget-title widget-title"><?php if ($title) {
             echo $title;
         } ?></h1>
-<div class="hero-slider-description">
+<div class="hero-slider-mockup-container"></div>
+<div class="hero-slider-description-container">
 <h4><?php echo wpautop($description); ?></h4>
 </div>
-
+</div>
 
 
 
