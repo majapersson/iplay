@@ -1,6 +1,7 @@
 header {
-  height: 9%;
-  background-color: $main-background;
+  position: absolute;
+  width: 100%;
+  height: 10%;
   box-sizing: border-box;
   border-bottom: 1px solid $border-color;
 
@@ -14,6 +15,11 @@ header {
 
     a {
       height: 100%;
+      z-index: 999;
+
+      img {
+        height: 100%;
+      }
     }
   }
 
@@ -25,6 +31,9 @@ header {
     align-items: center;
     padding: 0.5%;
     box-sizing: border-box;
+    @include bp(small) {
+      display: none;
+    }
 
     .menu-menu-1-container {
       padding-right: 5%;
@@ -51,7 +60,7 @@ header {
         padding: 5%;
 
         a {
-          font-size: 18px !important;
+          font-size: 14px !important;
           text-transform: none !important;
           margin-top: 20px !important;
         }
@@ -64,15 +73,17 @@ header {
       margin: 0;
       padding: 0;
 
+      li {
+        z-index: 999;
+      }
+
       .menu-item a {
         color: $main-light;
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 16px;
         margin: 10px;
-        @include bp(medium) {
-          font-size: 18px;
-        }
+        @include bp(medium) {}
         @include bp(small) {}
 
         &:hover {
@@ -96,11 +107,21 @@ header {
       height: 100%;
       width: 160px;
       min-width: 160px;
-      background: $main-accent;
-      color: $main-light;
+      background: $light-accent;
       display: flex;
       justify-content: center;
       align-items: center;
+      -webkit-transform: skew(160deg);
+      -moz-transform: skew(160deg);
+      -o-transform: skew(160deg);
+      webkit-backface-visibility: hidden;
+
+      p {
+        transform: skew(-160deg);
+        color: #000000;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
     }
 
     .language-container {
@@ -115,6 +136,105 @@ header {
         background-position: center;
         background-size: cover;
         border: none;
+      }
+    }
+  }
+
+  .nav-menu-mobile {
+    display: none;
+    @include bp(small) {
+      display: block;
+
+      label {
+        .menu {
+          position: absolute;
+          right: -100px;
+          top: -100px;
+          z-index: 100;
+          width: 200px;
+          height: 200px;
+          background: #FFF;
+          border-radius: 50% 50% 50% 50%;
+          transition: 0.5s ease-in-out;
+          box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+          cursor: pointer;
+          z-index: 9999;
+        }
+
+        .hamburger {
+          position: absolute;
+          top: 135px;
+          left: 50px;
+          width: 30px;
+          height: 2px;
+          background: #000;
+          display: block;
+          transform-origin: center;
+          transition: 0.5s ease-in-out;
+
+          &:after,
+          &:before {
+            transition: 0.5s ease-in-out;
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #000;
+          }
+
+          &:before {
+            top: -10px;
+          }
+
+          &:after {
+            bottom: -10px;
+          }
+        }
+
+        input {
+          display: none;
+        }
+
+        input:checked + .menu {
+          box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+          border-radius: 0;
+
+          .hamburger {
+            transform: rotate(45deg);
+
+            &:after {
+              transform: rotate(90deg);
+              bottom: 0;
+            }
+
+            &:before {
+              transform: rotate(90deg);
+              top: 0;
+            }
+          }
+        }
+
+        input:checked + .menu + ul {
+          opacity: 1;
+        }
+
+        ul {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          opacity: 0;
+          transition: 0.5s 0s ease-in-out;
+          z-index: 9999;
+        }
+
+        a {
+          margin-bottom: 1em;
+          display: block;
+          color: #000;
+          text-decoration: none;
+        }
       }
     }
   }
