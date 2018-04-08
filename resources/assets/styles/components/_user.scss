@@ -16,8 +16,14 @@
     h3, strong {
       text-transform: uppercase;
     }
+
+    h3 {
+      text-align: left;
+    }
+
     strong {
       font-size: 0.8rem;
+      opacity: 0.5;
     }
   }
 
