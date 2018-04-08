@@ -10,7 +10,7 @@ class Iplay_Widget_Callout extends Iplay_Widget
 {
     public function __construct()
     {
-        $this->widget_cssclass    = 'iplay_widget_callout widget-img-grid';
+        $this->widget_cssclass    = 'iplay_widget_callout widget-callout';
         $this->widget_description = __('Display a responsive callout', 'iplay');
         $this->widget_id          = 'iplay_widget_callout';
         $this->widget_name        = __('Iplay - Callout', 'iplay');
@@ -63,7 +63,7 @@ class Iplay_Widget_Callout extends Iplay_Widget
     		</style>
 
 <div class="container">
-
+<div class="callout-left-section">
     <h1 class="widget-title widget-title--home"><?php if ($title) {
             echo $title;
         } ?></h1>
@@ -76,6 +76,11 @@ class Iplay_Widget_Callout extends Iplay_Widget
         <div class="google-play"></div>
         <div class="app-store"></div>
     </div>
+    </div>
+    <div class="callout-right-section">
+    <div class="iphone-preview-container"></div>
+    </div>
+</div>
 
   <?php
         echo $after_widget;
