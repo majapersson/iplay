@@ -1,14 +1,18 @@
 :root {
   font-size: 18px;
 }
-
 $font-default: 'Helvetica Neue', 'Segoe UI', sans-serif;
 
 body {
   font-family: $font-default;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-default;
 }
 
@@ -22,9 +26,13 @@ h2 {
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   margin: 0;
   text-align: left;
+}
+
+h4 {
+  font-size: 1rem;
 }
 
 p {

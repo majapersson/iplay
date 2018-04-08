@@ -29,14 +29,13 @@ header {
         color: $main-light;
         cursor: pointer;
 
-        h3 {
+        h4 {
           opacity: 1;
         }
       }
 
-      h3 {
+      h4 {
         transform: skew(20deg);
-        font-size: 22px;
         opacity: 0.5;
       }
     }
@@ -128,27 +127,47 @@ header {
     .hero-slider-icon-container {
       width: 80%;
       height: 20%;
-      border: 1px solid black;
       display: flex;
       margin: 0 auto;
+      padding-left: 5%;
 
       .hero-slider-left-icons-container,
       .hero-slider-right-icons-container {
         width: 50%;
         box-sizing: border-box;
         height: 100%;
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         .first-icon-contain,
-        .second-icon-contain {
+        .fourth-icon-contain,
+        .second-icon-contain,
+        .third-icon-contain {
           width: 75px;
           height: 75px;
           border: 1px solid black;
           background: $light-accent;
           border-radius: 50%;
+          background-position: center;
+          background-size: 55%;
+          background-repeat: no-repeat;
+        }
+
+        .first-icon-contain {
+          background-image: url("/themes/iplay/assets/images/connect.svg");
+        }
+
+        .second-icon-contain {
+          background-image: url("/themes/iplay/assets/images/camera.svg");
+        }
+
+        .third-icon-contain {
+          background-image: url("/themes/iplay/assets/images/social-networks.svg");
+        }
+
+        .fourth-icon-contain {
+          background-image: url("/themes/iplay/assets/images/notification.svg");
         }
 
         .hero-slider-bottom-icon-container,
@@ -157,8 +176,7 @@ header {
           height: 50%;
           display: flex;
           align-items: center;
-
-          .first-icon-contain {}
+          justify-content: center;
 
           p {
             letter-spacing: 0.11px;

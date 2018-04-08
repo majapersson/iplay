@@ -83,19 +83,19 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
 
     <div class="slider-change-container">
         <div class="first-button">
-            <h3><?php if ($first_button_title) {
+            <h4><?php if ($first_button_title) {
                 echo $first_button_title;
-            } ?></h3>
+            } ?></h4>
         </div>
         <div class="second-button">
-            <h3><?php if ($second_button_title) {
+            <h4><?php if ($second_button_title) {
                 echo $second_button_title;
-            } ?></h3>
+            } ?></h4>
         </div>
         <div class="third-button">
-            <h3><?php if ($third_button_title) {
+            <h4><?php if ($third_button_title) {
                 echo $third_button_title;
-            } ?></h3>
+            } ?></h4>
         </div>
     </div>
     <div class="current-slide-container">
@@ -116,12 +116,21 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
 </p>
         </div>
         <div class="hero-slider-bottom-icon-container">
-        <div class="second-icon-contain">
-            <p>Shoot pictures, videos and report live from your games.</p>
-        </div>
+        <div class="second-icon-contain"></div>
+        <p>Shoot pictures, videos and report live from your games.</p>
         </div>
     </div>
-    <div class="hero-slider-right-icons-container"></div>
+    <div class="hero-slider-right-icons-container">
+        <div class="hero-slider-top-icon-container">
+        <div class="third-icon-contain"></div>
+        <p>Connect with dieticians, mental coaches, agents and more.
+</p>
+        </div>
+        <div class="hero-slider-bottom-icon-container">
+        <div class="fourth-icon-contain"></div>
+        <p>Shoot pictures, videos and report live from your games.</p>
+        </div>
+    </div>
 </div>
 </div>
 
