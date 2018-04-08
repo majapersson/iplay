@@ -64,7 +64,7 @@ class Iplay_Widget_Testimonials extends Iplay_Widget
                 </div>
                 <div class="user__info">
                     <h3><?php echo $post->post_title ?></h3>
-                    <p><strong><?php echo $fields['team'] ?></strong></p>
+                    <p class="span"><?php echo $fields['team'] ?></p>
                     <p><?php echo $fields['description'] ?></p>
                 </div>
             </div>

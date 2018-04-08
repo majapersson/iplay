@@ -65,12 +65,12 @@ class Iplay_Widget_Team extends Iplay_Widget
                 </div>
                 <div class="user__info">
                     <h3><?php echo $post->post_title ?></h3>
-                    <p><strong><?php echo $fields['title']; ?></strong></p>
+                    <p class="span"><?php echo $fields['title']; ?></p>
                     <p><?php echo $fields['description']; ?></p>
                 </div>
             </div>
         <?php endforeach; ?>
-        <a href="#" class="button">Our developers</a>
+        <a href="#" class="button"><p>Our developers</p></a>
     </div>
 </div>
 

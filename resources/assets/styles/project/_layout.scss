@@ -13,6 +13,9 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
   @include bp(small) {
     width: 100%;
