@@ -8,10 +8,14 @@ body {
 
 .content {
   background-color: $main-light;
+  color: $main-dark;
   padding: 2rem 0;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
   @include bp(small) {
     width: 100%;
@@ -20,9 +24,9 @@ body {
     width: 80%;
   };
   @include bp(large) {
-    width: 60%;
+    width: 65%;
   };
   @include bp(x-large) {
-    width: 50%;
+    width: 60%;
   };
 }
