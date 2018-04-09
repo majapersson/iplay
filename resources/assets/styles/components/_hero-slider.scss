@@ -1,7 +1,11 @@
+header {
+  border-bottom: none;
+}
+
 .widget-hero-slider {
   background: $content-background;
   color: $main-background;
-  height: 120%;
+  height: 135%;
   width: 100%;
   overflow: hidden;
 
@@ -25,14 +29,13 @@
         color: $main-light;
         cursor: pointer;
 
-        h3 {
+        h4 {
           opacity: 1;
         }
       }
 
-      h3 {
+      h4 {
         transform: skew(20deg);
-        font-size: 22px;
         opacity: 0.5;
       }
     }
@@ -93,26 +96,97 @@
       float: left;
     }
 
-    .hero-slider-description-container {
+    .mockup-text-container {
       height: 50%;
-      width: 40%;
-      float: right;
-      display: flex;
-      align-items: center;
-      height: 35%;
-      letter-spacing: 0.41px;
-      line-height: 40px;
+      width: 100%;
 
-      h4 {
-        font-size: 22px;
+      .hero-slider-mockup-container {
+        background-image: url("/themes/iplay/assets/images/two-screen-mockup.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+
+      .hero-slider-description-container {
+        height: 85%;
+        width: 40%;
+        float: right;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.41px;
+        line-height: 40px;
+
+        h4 {
+          font-size: 22px;
+          word-break: break-all;
+        }
       }
     }
-  }
 
-  .hero-slider-mockup-container {
-    background-image: url("/themes/iplay/assets/images/two-screen-mockup.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    .hero-slider-icon-container {
+      width: 80%;
+      height: 20%;
+      display: flex;
+      margin: 0 auto;
+      padding-left: 5%;
+
+      .hero-slider-left-icons-container,
+      .hero-slider-right-icons-container {
+        width: 50%;
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .first-icon-contain,
+        .fourth-icon-contain,
+        .second-icon-contain,
+        .third-icon-contain {
+          width: 75px;
+          height: 75px;
+          border: 1px solid black;
+          background: $light-accent;
+          border-radius: 50%;
+          background-position: center;
+          background-size: 55%;
+          background-repeat: no-repeat;
+        }
+
+        .first-icon-contain {
+          background-image: url("/themes/iplay/assets/images/connect.svg");
+        }
+
+        .second-icon-contain {
+          background-image: url("/themes/iplay/assets/images/camera.svg");
+        }
+
+        .third-icon-contain {
+          background-image: url("/themes/iplay/assets/images/social-networks.svg");
+        }
+
+        .fourth-icon-contain {
+          background-image: url("/themes/iplay/assets/images/notification.svg");
+        }
+
+        .hero-slider-bottom-icon-container,
+        .hero-slider-top-icon-container {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            letter-spacing: 0.11px;
+            line-height: 28px;
+            font-size: 16px;
+            margin-left: 5%;
+            width: 75%;
+          }
+        }
+      }
+    }
   }
 }

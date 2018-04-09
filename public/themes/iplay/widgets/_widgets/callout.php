@@ -73,8 +73,12 @@ class Iplay_Widget_Callout extends Iplay_Widget
 
 
     <div class="download-app-container">
-        <div class="google-play"></div>
-        <div class="app-store"></div>
+        <div class="google-play-box">
+            <p>Google Play</p>
+        </div>
+        <div class="app-store-box">
+            <p>App Store</p>
+        </div>
     </div>
     </div>
     <div class="callout-right-section">

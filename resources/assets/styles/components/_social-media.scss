@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  @include bp(small) {
+    justify-content: center;
+    margin: 2rem 0;
+  };
+
+  a svg {
+    height: 1.5rem;
+    margin: 0 1.5rem;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    path {
+      fill: $light-accent;
+      stroke: $light-accent;
+    }
+  }
+}
