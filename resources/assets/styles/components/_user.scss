@@ -1,7 +1,13 @@
 .user {
   display: flex;
+  align-items: center;
   margin: 2rem 0;
   width: 100%;
+
+  @include bp(small) {
+    flex-direction: column;
+    margin: 1rem 0;
+  };
 
   &__image {
     min-width: 30%;
@@ -17,9 +23,25 @@
       text-align: left;
       text-transform: uppercase;
     }
+
+    @include bp(small) {
+      text-align: center;
+
+      h3 {
+        text-align: center;
+      }
+
+      .span {
+        margin: 0;
+      }
+    };
   }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
+
+    @include bp(small) {
+      flex-direction: column;
+    };
   }
 }

@@ -45,6 +45,7 @@ class Iplay_Widget_Testimonials extends Iplay_Widget
 
         $posts = get_posts([
             'numberposts' => '-1',
+            'order' => 'ASC',
             'post_type' => 'superuser',
         ]);
 
@@ -65,7 +66,12 @@ class Iplay_Widget_Testimonials extends Iplay_Widget
                 <div class="user__info">
                     <h3><?php echo $post->post_title ?></h3>
                     <p class="span"><?php echo $fields['team'] ?></p>
-                    <p><?php echo $fields['description'] ?></p>
+                    <?php echo $fields['description'] ?>
+                    <div class="social">
+                        <a href="<?php echo $media['twitter'] ?>"><?php require template_path('assets/images/social-media/003-twitter-logo-silhouette.svg') ?></a>
+                        <a href="<?php echo $media['linkedin'] ?>"><?php require template_path('assets/images/social-media/001-linkedin.svg') ?></a>
+                        <a href="<?php echo $media['instagram'] ?>"><?php require template_path('assets/images/social-media/002-instagram-logo.svg') ?></a>
+                    </div>
                 </div>
             </div>
         <?php endforeach; ?>
