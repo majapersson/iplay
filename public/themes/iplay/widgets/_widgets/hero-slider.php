@@ -123,12 +123,11 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
     <div class="hero-slider-right-icons-container">
         <div class="hero-slider-top-icon-container">
         <div class="third-icon-contain"></div>
-        <p>Connect with dieticians, mental coaches, agents and more.
-</p>
+        <p>Connect your social networks to Iplay and maintain all your communication in one place.</p>
         </div>
         <div class="hero-slider-bottom-icon-container">
         <div class="fourth-icon-contain"></div>
-        <p>Shoot pictures, videos and report live from your games.</p>
+        <p>Follow updates and flows from companies.</p>
         </div>
     </div>
 </div>
