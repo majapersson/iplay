@@ -1,0 +1,10 @@
+.milestone canvas {
+  position: fixed;
+}
+
+.milestone {
+  background-color: $main-light;
+  color: $main-dark;
+  border-radius: 1rem;
+  box-shadow: 2rem 2rem;
+}
