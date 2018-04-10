@@ -141,100 +141,36 @@ header {
     }
   }
 
-  .nav-menu-mobile {
+  .mobile-menu {
     display: none;
+    position: absolute;
+    right: 1%;
+    top: 10%;
     @include bp(small) {
       display: block;
+    }
 
-      label {
-        .menu {
-          position: absolute;
-          right: -100px;
-          top: -100px;
-          z-index: 100;
-          width: 200px;
-          height: 200px;
-          background: #FFF;
-          border-radius: 50% 50% 50% 50%;
-          transition: 0.5s ease-in-out;
-          box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
-          cursor: pointer;
-          z-index: 9999;
-        }
+    .hamburger-box {
+      z-index: 9999;
+    }
 
-        .hamburger {
-          position: absolute;
-          top: 135px;
-          left: 50px;
-          width: 30px;
-          height: 2px;
-          background: #000;
-          display: block;
-          transform-origin: center;
-          transition: 0.5s ease-in-out;
+    .mobile-sub-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      z-index: 999;
+      width: 75%;
+      background: $main-background;
+      right: 0;
 
-          &:after,
-          &:before {
-            transition: 0.5s ease-in-out;
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: #000;
+      ul {
+        list-style-type: none;
+
+        li {
+          a {
+            color: $main-accent;
           }
-
-          &:before {
-            top: -10px;
-          }
-
-          &:after {
-            bottom: -10px;
-          }
-        }
-
-        input {
-          display: none;
-        }
-
-        input:checked + .menu {
-          box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
-          border-radius: 0;
-
-          .hamburger {
-            transform: rotate(45deg);
-
-            &:after {
-              transform: rotate(90deg);
-              bottom: 0;
-            }
-
-            &:before {
-              transform: rotate(90deg);
-              top: 0;
-            }
-          }
-        }
-
-        input:checked + .menu + ul {
-          opacity: 1;
-        }
-
-        ul {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-          opacity: 0;
-          transition: 0.5s 0s ease-in-out;
-          z-index: 9999;
-        }
-
-        a {
-          margin-bottom: 1em;
-          display: block;
-          color: #000;
-          text-decoration: none;
         }
       }
     }

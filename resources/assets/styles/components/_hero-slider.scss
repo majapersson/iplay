@@ -8,11 +8,18 @@ header {
   height: 135%;
   width: 100%;
   overflow: hidden;
+  @include bp(small) {
+    height: auto;
+  }
 
   .slider-change-container {
     width: 102%;
     height: 12%;
     display: flex;
+    @include bp(small) {
+      height: 8%;
+      width: 106%;
+    }
 
     .first-button,
     .second-button,
@@ -37,6 +44,11 @@ header {
       h4 {
         transform: skew(20deg);
         opacity: 0.5;
+        @include bp(small) {
+          text-align: center;
+          font-weight: normal;
+          font-size: 16px;
+        }
       }
     }
 
@@ -49,10 +61,16 @@ header {
     }
 
     .first-button {
-      margin-left: -2%;
+      margin-left: -4%;
 
       &:hover {
         border-right: 10px solid $light-accent;
+      }
+
+      h4 {
+        @include bp(small) {
+          width: 50%;
+        }
       }
     }
 
@@ -61,6 +79,12 @@ header {
         border-right: 10px solid $light-accent;
         border-left: 10px solid $light-accent;
         box-sizing: border-box;
+      }
+
+      h4 {
+        @include bp(small) {
+          width: 70%;
+        }
       }
     }
 
@@ -81,6 +105,9 @@ header {
     text-align: center;
     font-size: 48px;
     margin-top: 1%;
+    @include bp(small) {
+      font-size: 42px;
+    }
   }
 
   .current-slide-container {
@@ -89,6 +116,10 @@ header {
     padding-left: 10%;
     padding-right: 10%;
     box-sizing: border-box;
+    @include bp(small) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     .hero-slider-mockup-container {
       height: 50%;
@@ -106,6 +137,11 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
         height: 100%;
+        @include bp(small) {
+          background-image: url("/themes/iplay/assets/images/two-screen-mockup-mobile.png");
+          height: 65%;
+          width: 100%;
+        }
       }
 
       .hero-slider-description-container {
@@ -116,10 +152,21 @@ header {
         align-items: center;
         letter-spacing: 0.41px;
         line-height: 40px;
+        @include bp(small) {
+          width: 100%;
+          height: 50%;
+        }
 
         h4 {
           font-size: 22px;
           word-break: break-all;
+          @include bp(small) {
+            font-size: 18px;
+            width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+            text-align: center;
+          }
         }
       }
     }
@@ -130,6 +177,12 @@ header {
       display: flex;
       margin: 0 auto;
       padding-left: 5%;
+      @include bp(small) {
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        flex-direction: column;
+      }
 
       .hero-slider-left-icons-container,
       .hero-slider-right-icons-container {
@@ -139,6 +192,9 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include bp(small) {
+          width: 100%;
+        }
 
         .first-icon-contain,
         .fourth-icon-contain,
@@ -177,6 +233,9 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
+          @include bp(small) {
+            flex-direction: column;
+          }
 
           p {
             letter-spacing: 0.11px;
@@ -184,6 +243,19 @@ header {
             font-size: 16px;
             margin-left: 5%;
             width: 75%;
+            text-align: center;
+            @include bp(small) {
+              margin-left: 0;
+            }
+          }
+        }
+
+        .hero-slider-left-icons-container {
+          @include bp(small) {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
           }
         }
       }

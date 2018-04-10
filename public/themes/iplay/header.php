@@ -20,26 +20,17 @@
                         <div class="language-icon"></div>
                     </div>
             </div>
-            <div class="nav-menu-mobile">
-                <label>
-  <input type='checkbox'>
-  <span class='menu'>
-    <span class='hamburger'></span>
+            <div class="mobile-menu">
+            <button class="hamburger hamburger--spring" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
   </span>
-  <ul>
-    <li>
-      <a href='#'>Home</a>
-    </li>
-    <li>
-      <a href='#'>About</a>
-    </li>
-    <li>
-      <a href='#'>Work</a>
-    </li>
-  </ul>
-</label>
-            </div>
+</button>
+<div class="mobile-sub-menu">
+        <?php wp_nav_menu(['theme_location' => 'primary-menu']);?>
 
+</div>
+</div>
     </header>
     <?php
     $slug = basename(get_permalink());

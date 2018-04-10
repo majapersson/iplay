@@ -45,6 +45,10 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
               'std'   => null,
               'label' => __('Description:', 'iplay'),
           ),
+          'For Athletes' => array(
+              'std' => __('For Athletes', 'iplay'),
+              'type' => 'widget-area',
+          ),
       );
         parent::__construct();
     }
