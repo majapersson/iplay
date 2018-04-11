@@ -11,20 +11,24 @@ header {
   @include bp(small) {
     height: auto;
   }
+  @include bp(medium) {
+    height: auto;
+  }
 
   .slider-change-container {
-    width: 102%;
+    width: 106%;
     height: 12%;
     display: flex;
     @include bp(small) {
       height: 8%;
-      width: 106%;
+    }
+    @include bp(medium) {
+      height: 8%;
     }
 
     .first-button,
     .second-button,
     .third-button {
-      height: 100%;
       width: 34%;
       box-sizing: border-box;
       display: flex;
@@ -32,24 +36,49 @@ header {
       align-items: center;
 
       &:hover {
-        background: $main-background;
-        color: $main-light;
+        background: rgba(0, 0, 0, 0.09);
         cursor: pointer;
+        transition: all 0.5s ease;
 
         h4 {
-          opacity: 1;
+          font-weight: bold;
         }
       }
 
       h4 {
         transform: skew(20deg);
         opacity: 0.5;
+        font-weight: normal;
         @include bp(small) {
           text-align: center;
           font-weight: normal;
           font-size: 16px;
         }
       }
+    }
+
+    .active {
+      background: $main-background !important;
+      color: $main-light;
+      box-sizing: border-box;
+
+      h4 {
+        opacity: 1;
+        font-weight: normal !important;
+      }
+    }
+
+    .first-button.active {
+      border-right: 10px solid $light-accent;
+    }
+
+    .second-button.active {
+      border-right: 10px solid $light-accent;
+      border-left: 10px solid $light-accent;
+    }
+
+    .third-button.active {
+      border-left: 10px solid $light-accent;
     }
 
     .first-button,
@@ -63,9 +92,7 @@ header {
     .first-button {
       margin-left: -4%;
 
-      &:hover {
-        border-right: 10px solid $light-accent;
-      }
+      &:hover {}
 
       h4 {
         @include bp(small) {
@@ -75,11 +102,7 @@ header {
     }
 
     .second-button {
-      &:hover {
-        border-right: 10px solid $light-accent;
-        border-left: 10px solid $light-accent;
-        box-sizing: border-box;
-      }
+      &:hover {}
 
       h4 {
         @include bp(small) {
@@ -95,9 +118,7 @@ header {
       webkit-backface-visibility: hidden;
       margin-right: -2%;
 
-      &:hover {
-        border-left: 10px solid $light-accent;
-      }
+      &:hover {}
     }
   }
 
@@ -121,6 +142,14 @@ header {
       padding-right: 0;
     }
 
+    h1 {
+      display: none;
+    }
+
+    h1.active {
+      display: block;
+    }
+
     .hero-slider-mockup-container {
       height: 50%;
       width: 60%;
@@ -130,6 +159,12 @@ header {
     .mockup-text-container {
       height: 50%;
       width: 100%;
+      @include bp(small) {
+        height: 100vh;
+      }
+      @include bp(medium) {
+        height: 500px;
+      }
 
       .hero-slider-mockup-container {
         background-image: url("/themes/iplay/assets/images/two-screen-mockup.png");
@@ -139,7 +174,12 @@ header {
         height: 100%;
         @include bp(small) {
           background-image: url("/themes/iplay/assets/images/two-screen-mockup-mobile.png");
-          height: 65%;
+          height: 50%;
+          width: 100%;
+        }
+        @include bp(medium) {
+          background-image: url("/themes/iplay/assets/images/two-screen-mockup-mobile.png");
+          height: 70%;
           width: 100%;
         }
       }
@@ -156,6 +196,10 @@ header {
           width: 100%;
           height: 50%;
         }
+        @include bp(medium) {
+          width: 100%;
+          height: 50%;
+        }
 
         h4 {
           font-size: 22px;
@@ -166,6 +210,9 @@ header {
             padding-left: 5%;
             padding-right: 5%;
             text-align: center;
+          }
+          @include bp(medium) {
+            font-size: 24px;
           }
         }
       }
@@ -183,6 +230,13 @@ header {
         padding-left: 0;
         flex-direction: column;
       }
+      @include bp(medium) {
+        padding-left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-bottom: 10%;
+      }
 
       .hero-slider-left-icons-container,
       .hero-slider-right-icons-container {
@@ -193,6 +247,9 @@ header {
         flex-direction: column;
         justify-content: center;
         @include bp(small) {
+          width: 100%;
+        }
+        @include bp(medium) {
           width: 100%;
         }
 
@@ -208,6 +265,10 @@ header {
           background-position: center;
           background-size: 55%;
           background-repeat: no-repeat;
+          @include bp(medium) {
+            width: 100px;
+            height: 100px;
+          }
         }
 
         .first-icon-contain {
@@ -236,6 +297,9 @@ header {
           @include bp(small) {
             flex-direction: column;
           }
+          @include bp(medium) {
+            margin-top: 5%;
+          }
 
           p {
             letter-spacing: 0.11px;
@@ -246,6 +310,9 @@ header {
             text-align: center;
             @include bp(small) {
               margin-left: 0;
+            }
+            @include bp(medium) {
+              font-size: 20px;
             }
           }
         }

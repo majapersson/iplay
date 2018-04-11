@@ -13,3 +13,21 @@ $('.hamburger').click(function(e){
   $('.mobile-sub-menu').toggle("slide");
   $(this).toggleClass('open');
 });
+
+
+//
+
+const userButtons = document.querySelectorAll('.slider-change-container div');
+const userTitles = document.querySelectorAll('.current-slide-container h1');
+
+userButtons.forEach(userButton => userButton.addEventListener("click", e => {
+
+
+userButtons.forEach(x => x.classList.remove("active"));
+userTitles.forEach(x => x.classList.remove("active"));
+e.target.classList.add("active");
+document.getElementById(`${e.target.id}Title`).classList.add("active");
+
+
+
+}));

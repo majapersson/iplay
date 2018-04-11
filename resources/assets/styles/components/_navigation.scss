@@ -13,6 +13,9 @@ header {
     float: left;
     display: flex;
     align-items: center;
+    @include bp(small) {
+      display: block;
+    }
 
     a {
       height: 100%;
@@ -33,6 +36,9 @@ header {
     padding: 0.5%;
     box-sizing: border-box;
     @include bp(small) {
+      display: none;
+    }
+    @include bp(medium) {
       display: none;
     }
 
@@ -102,8 +108,6 @@ header {
       }
     }
 
-    .menu {}
-
     .get-app-container {
       height: 100%;
       width: 160px;
@@ -147,6 +151,9 @@ header {
     right: 1%;
     top: 10%;
     @include bp(small) {
+      display: block;
+    }
+    @include bp(medium) {
       display: block;
     }
 
