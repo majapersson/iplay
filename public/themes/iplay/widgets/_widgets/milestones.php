@@ -46,29 +46,34 @@ class Iplay_Widget_Milestones extends Iplay_Widget
         $posts = get_posts([
             'numberposts' => '-1',
             'order' => 'ASC',
-            'post_type' => 'milestones',
+            'post_type' => 'milestone',
         ]);
 
         // die(var_dump($posts));
 
         echo $before_widget; ?>
 
-<div class="content">
     <div class="container">
         <?php foreach ($posts as $post):
             $fields = get_fields($post);
-            $image = get_field('image', $post);
             ?>
-            <div class="milestone">
-                <p><?php echo $post->post_title ?></p>
-                <p><?php echo $fields['description']; ?></p>
-                <p><?php echo $fields['date']; ?></p>
-            </div>
-            <div class="timeline">
+            <div class="milestone__wrapper">
+                <div class="milestone">
+                    <div class="milestone__content">
+                        <div class="milestone__title">
+                            <p ><?php echo $post->post_title ?></p>
+                        </div>
+                        <p><?php echo $fields['description']; ?></p>
+                        <a href="#" class="milestone__link">Read more &rarr;</a>
+                    </div>
+                    <p class="milestone__date"><?php echo $fields['date']; ?></p>
+                </div>
+                <div class="timeline">
+                    <div class="dot"></div>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
-</div>
 
   <?php
         echo $after_widget;

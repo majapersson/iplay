@@ -1,8 +1,6 @@
 <?php /* Template Name: Milestones */
-get_header(); ?>
-<main class="milestones">
+get_header();
 
-<canvas id="stars"></canvas>
-    <?php dynamic_sidebar('widget_area_milestones'); ?>
-</main>
-<?php get_footer(); ?>
+dynamic_sidebar('widget_area_milestones');
+
+get_footer(); ?>
