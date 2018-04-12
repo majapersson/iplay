@@ -41,6 +41,8 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('wordplate', mix('styles/app.css'));
 
+    wp_deregister_script('jquery');
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
     wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
     wp_enqueue_script('wordplate');
     wp_enqueue_script( 'delaunay', get_template_directory_uri() . '/assets/scripts/motion-graphic/delaunay.js', array(), '1.0.0', true );

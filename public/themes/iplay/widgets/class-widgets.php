@@ -11,7 +11,8 @@ class Iplay_Widgets
           'team.php',
           'testimonials.php',
           'hero-slider.php',
-          'milestones.php',
+          'superusers.php',
+          'milestones.php'
         );
 
         foreach ($widgets as $widget) {
@@ -30,6 +31,7 @@ class Iplay_Widgets
         register_widget('Iplay_Widget_Team');
         register_widget('Iplay_Widget_Testimonials');
         register_widget('Iplay_Widget_Hero_Slider');
+        register_widget('Iplay_Widget_Superuser');
         register_widget('Iplay_Widget_Milestones');
     }
 

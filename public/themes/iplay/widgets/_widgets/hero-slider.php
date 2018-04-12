@@ -45,6 +45,10 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
               'std'   => null,
               'label' => __('Description:', 'iplay'),
           ),
+          'For Athletes' => array(
+              'std' => __('For Athletes', 'iplay'),
+              'type' => 'widget-area',
+          ),
       );
         parent::__construct();
     }
@@ -82,26 +86,28 @@ class Iplay_Widget_Hero_Slider extends Iplay_Widget
 
 
     <div class="slider-change-container">
-        <div class="first-button">
+        <div class="first-button" id="firstButton">
             <h4><?php if ($first_button_title) {
                 echo $first_button_title;
             } ?></h4>
         </div>
-        <div class="second-button">
+        <div class="second-button active" id="secondButton">
             <h4><?php if ($second_button_title) {
                 echo $second_button_title;
             } ?></h4>
         </div>
-        <div class="third-button">
+        <div class="third-button" id="thirdButton">
             <h4><?php if ($third_button_title) {
                 echo $third_button_title;
             } ?></h4>
         </div>
     </div>
     <div class="current-slide-container">
-    <h1 class="widget-title widget-title"><?php if ($title) {
+        <h1 id="firstButtonTitle"><?php echo "FOR FANS" ?></h1>
+    <h1 class="active" id="secondButtonTitle"><?php if ($title) {
             echo $title;
         } ?></h1>
+<h1 id="thirdButtonTitle"><?php echo "OTHER" ?></h1>
         <div class="mockup-text-container">
 <div class="hero-slider-mockup-container"></div>
 <div class="hero-slider-description-container">
