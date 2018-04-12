@@ -2,13 +2,11 @@ export default (function () {
 
   function scroll() {
     const dots = document.querySelectorAll('.dot');
-    const boxTop = window.scrollY + 300;
-    const boxBottom = window.scrollY + 500;
+    const boxTop = window.innerHeight / 2 - 100;
+    const boxBottom = window.innerHeight / 2 + 100;
 
     dots.forEach(dot => {
       const Y = dot.getBoundingClientRect().y;
-      console.log(boxBottom);
-      console.log(window.scrollY);
       if (Y > boxTop && Y < boxBottom)
       {
         dot.classList.add('currentDot');

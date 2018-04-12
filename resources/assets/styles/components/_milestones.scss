@@ -1,13 +1,27 @@
 .milestone__wrapper {
-  box-sizing: border-box;
   display: flex;
   height: 12.67rem;
   position: relative;
   width: 100%;
+  z-index: 1;
 
   @include bp(small) {
-    padding: 0 1rem;
+    padding: 2rem 0;
   };
+
+  &--end {
+    @extend .milestone__wrapper;
+    flex-direction: column;
+    position: relative;
+    @include bp(small) {
+      padding: 0;
+    }
+    .timeline {
+      position: static;
+      height: 30%;
+      margin-top: 1rem;
+    }
+  }
 
   &:nth-of-type(odd) {
     justify-content: flex-end;
@@ -26,7 +40,8 @@
   }
   &:first-of-type {
     .timeline {
-      height: 50%;
+      height: 60%;
+      top: auto;
       bottom: 0;
       .dot {
         top: 0;
@@ -41,7 +56,6 @@
 }
 
 .milestone {
-
   &__title {
     background-color: $purple-accent;
     color: $main-light;
@@ -56,8 +70,8 @@
     width: 16rem;
 
     @include bp(small) {
-      width: 75%;
-      left: -1rem;
+      width: 70%;
+      left: -0.5rem;
     };
 
     p {
@@ -81,6 +95,7 @@
     width: 18rem;
 
     @include bp(small) {
+      margin-right: 1rem;
       width: 13rem;
     };
   }
@@ -96,6 +111,9 @@
     opacity: 1;
     text-align: right;
     text-transform: uppercase;
+    @include bp(small) {
+      margin-right: 1rem;
+    };
   }
 }
 
@@ -103,6 +121,7 @@
   background-color: rgba($main-light, 0.35);
   height: 100%;
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   margin: auto;
@@ -123,8 +142,17 @@
     width: 0.7rem;
   }
   .currentDot {
-    height: 1.5rem;
-    left: -0.65rem;
-    width: 1.5rem;
+    transform: scale(2);
+  }
+}
+
+.iplay_widget_background {
+  background-image: linear-gradient(to bottom, rgba(#375CE2, 0.5), #000000);
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+
+  #stars {
+    position: fixed;
   }
 }

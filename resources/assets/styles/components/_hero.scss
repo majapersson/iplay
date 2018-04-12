@@ -1,19 +1,40 @@
-.hero {
-  background-color: $main-background;
+.iplay_widget_hero {
+  background-image: linear-gradient(to bottom, rgba($main-accent, 0.2) 0%, #000000);
   color: $main-light;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 70vh;
+  overflow: hidden;
+  position: relative;
 
-  &__content {
+  @include bp(small) {
+    height: 90vh;
+  };
+
+  .hero {
     @extend .container;
-    text-align: center;
+    position: relative;
+    &__content {
+      text-align: center;
+    }
+    &__text {
+      font-size: 1.4rem;
+      letter-spacing: 0.41px;
+      line-height: 2.2rem;
+      @include bp(small) {
+        font-size: 1.2rem;
+      };
+    }
+
   }
-  &__text {
-    font-size: 1.4rem;
-    letter-spacing: 0.41px;
-    line-height: 2.2rem;
+
+  #stars {
+    z-index: 0;
   }
+}
+.hero.small {
+  margin: 5rem 0;
+  position: relative;
 }
