@@ -17,14 +17,8 @@ header {
 
   .slider-change-container {
     width: 106%;
-    height: 12%;
+    height: 8%;
     display: flex;
-    @include bp(small) {
-      height: 8%;
-    }
-    @include bp(medium) {
-      height: 8%;
-    }
 
     .first-button,
     .second-button,

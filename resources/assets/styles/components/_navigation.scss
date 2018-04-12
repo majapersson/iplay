@@ -48,8 +48,6 @@ header {
 
     .sub-menu {
       position: absolute;
-      border: 1px solid $border-color;
-      padding: 0.5% 8% 0.5% 0.5%;
       margin-top: 0.5%;
       background: $main-background;
       display: block;
@@ -57,6 +55,7 @@ header {
       visibility: hidden;
       -webkit-transition: opacity 600ms, visibility 600ms;
       transition: opacity 600ms, visibility 600ms;
+      width: 15%;
 
       &:hover {
         visibility: visible;
@@ -65,12 +64,19 @@ header {
 
       li {
         padding: 5%;
+        border-bottom: 1px solid $border-color;
+        box-sizing: border-box;
+        width: 100%;
 
         a {
           font-size: 14px !important;
           text-transform: none !important;
           margin-top: 20px !important;
         }
+      }
+
+      li:last-child {
+        border-bottom: 0;
       }
     }
 

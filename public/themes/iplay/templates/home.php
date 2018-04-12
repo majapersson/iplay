@@ -7,7 +7,7 @@ get_header();
 
 
 ?>
-<canvas id="stars" width="300" height="300"></canvas>
+<canvas id="stars" class="stars" width="300" height="300" data-color="#00FF7B"></canvas>
 
 <?php
 
