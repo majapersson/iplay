@@ -12,7 +12,8 @@ class Iplay_Widgets
           'testimonials.php',
           'hero-slider.php',
           'superusers.php',
-          'milestones.php'
+          'milestones.php',
+          'background.php',
         );
 
         foreach ($widgets as $widget) {
@@ -33,6 +34,7 @@ class Iplay_Widgets
         register_widget('Iplay_Widget_Hero_Slider');
         register_widget('Iplay_Widget_Superuser');
         register_widget('Iplay_Widget_Milestones');
+        register_widget('Iplay_Widget_Background');
     }
 
     public function register_sidebars()

@@ -19,6 +19,10 @@ class Iplay_Widget_Milestones extends Iplay_Widget
               'std' => __('Homepage/Widgetized', 'iplay'),
               'type' => 'widget-area',
           ),
+          'title' => [
+              'std' => __('Your hero title', 'iplay'),
+              'type' => 'text',
+              ]
       );
         parent::__construct();
     }
@@ -49,11 +53,14 @@ class Iplay_Widget_Milestones extends Iplay_Widget
             'post_type' => 'milestone',
         ]);
 
-        // die(var_dump($posts));
+        $title = isset($instance['title']) ? $instance['title'] : '';
 
         echo $before_widget; ?>
 
     <div class="container">
+        <section class="hero small">
+            <h1><?php _e($title, 'iplay') ?></h1>
+        </section>
         <?php foreach ($posts as $post):
             $fields = get_fields($post);
             ?>
@@ -61,18 +68,23 @@ class Iplay_Widget_Milestones extends Iplay_Widget
                 <div class="milestone">
                     <div class="milestone__content">
                         <div class="milestone__title">
-                            <p ><?php echo $post->post_title ?></p>
+                            <p ><?php _e($post->post_title, 'iplay') ?></p>
                         </div>
-                        <p><?php echo $fields['description']; ?></p>
+                        <p><?php _e($fields['description'], 'iplay'); ?></p>
                         <a href="#" class="milestone__link">Read more &rarr;</a>
                     </div>
-                    <p class="milestone__date"><?php echo $fields['date']; ?></p>
+                    <p class="milestone__date"><?php _e($fields['date'], 'iplay'); ?></p>
                 </div>
                 <div class="timeline">
                     <div class="dot"></div>
                 </div>
             </div>
         <?php endforeach; ?>
+        <div class="milestone__wrapper--end">
+            <div class="timeline"></div>
+            <div class="timeline"></div>
+            <div class="timeline"></div>
+        </div>
     </div>
 
   <?php

@@ -59,12 +59,12 @@ class Iplay_Widget_Hero extends Iplay_Widget
 
         echo $before_widget; ?>
 
+<canvas id="stars" class="stars" data-color="#3FBF55" width="300" height="300"></canvas>
 <div class="hero">
-    <canvas id="stars"></canvas>
     <div class="hero__content">
-        <h1 class="hero__title"><?php echo $title; ?></h1>
+        <h1 class="hero__title"><?php _e($title); ?></h1>
         <?php if (!empty($description)): ?>
-            <p class="hero__text"><?php echo $description; ?></p>
+            <p class="hero__text"><?php _e($description, 'iplay'); ?></p>
         <?php endif; ?>
     </div>
 </div>

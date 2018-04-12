@@ -13,28 +13,28 @@
     height: 90vh;
   };
 
-  .hero {
-    @extend .container;
-    position: relative;
-    &__content {
-      text-align: center;
-    }
-    &__text {
-      font-size: 1.4rem;
-      letter-spacing: 0.41px;
-      line-height: 2.2rem;
-      @include bp(small) {
-        font-size: 1.2rem;
-      };
-    }
-
-  }
-
   #stars {
     z-index: 0;
   }
 }
-.hero.small {
-  margin: 5rem 0;
+
+.hero {
+  @extend .container;
   position: relative;
+  &__content {
+    text-align: center;
+  }
+  &__text {
+    font-size: 1.4rem;
+    letter-spacing: 0.41px;
+    line-height: 2.2rem;
+    @include bp(small) {
+      font-size: 1.2rem;
+    };
+  }
+  &.small {
+    margin: 5rem 0;
+    position: relative;
+    text-align: center;
+  }
 }
