@@ -1,0 +1,158 @@
+.milestone__wrapper {
+  display: flex;
+  height: 12.67rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include bp(small) {
+    padding: 2rem 0;
+  };
+
+  &--end {
+    @extend .milestone__wrapper;
+    flex-direction: column;
+    position: relative;
+    @include bp(small) {
+      padding: 0;
+    }
+    .timeline {
+      position: static;
+      height: 30%;
+      margin-top: 1rem;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    justify-content: flex-end;
+    .timeline {
+      order: -1;
+      @include bp(small) {
+        order: 0;
+      };
+    }
+  }
+  &:nth-of-type(even) {
+    justify-content: flex-start;
+    @include bp(small) {
+      justify-content: flex-end;
+    };
+  }
+  &:first-of-type {
+    .timeline {
+      height: 60%;
+      top: auto;
+      bottom: 0;
+      .dot {
+        top: 0;
+      }
+    }
+  }
+  &:last-of-type {
+    .timeline {
+
+    }
+  }
+}
+
+.milestone {
+  &__title {
+    background-color: $purple-accent;
+    color: $main-light;
+    display: flex;
+    align-items: center;
+    padding: 0 2.1rem;
+    position: absolute;
+      top: -2rem;
+      left: -2rem;
+    transform: skew(-30deg);
+    height: 4rem;
+    width: 16rem;
+
+    @include bp(small) {
+      width: 70%;
+      left: -0.5rem;
+    };
+
+    p {
+      letter-spacing: 1px;
+      line-height: 1.3rem;
+      text-transform: uppercase;
+      transform: skew(30deg);
+      margin: 0;
+    }
+  }
+
+  &__content {
+    background-color: $main-light;
+    color: $main-dark;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    position: relative;
+    width: 18rem;
+
+    @include bp(small) {
+      margin-right: 1rem;
+      width: 13rem;
+    };
+  }
+
+  &__link {
+    color: $purple-accent;
+    text-decoration: none;
+  }
+
+  &__date {
+    @extend .span;
+    margin: 0;
+    opacity: 1;
+    text-align: right;
+    text-transform: uppercase;
+    @include bp(small) {
+      margin-right: 1rem;
+    };
+  }
+}
+
+.timeline {
+  background-color: rgba($main-light, 0.35);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 3px;
+
+  @include bp(small) {
+    margin-left: 2rem;
+  };
+
+  .dot {
+    background-color: $main-light;
+    border-radius: 50%;
+    height: 0.7rem;
+    position: absolute;
+    top: 40%;
+    left: -0.25rem;
+    transition: .3s ease;
+    width: 0.7rem;
+  }
+  .currentDot {
+    transform: scale(2);
+  }
+}
+
+.iplay_widget_background {
+  background-image: linear-gradient(to bottom, rgba(#375CE2, 0.5), #000000);
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+
+  #stars {
+    position: fixed;
+  }
+}
