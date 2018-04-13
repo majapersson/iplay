@@ -3,7 +3,7 @@ header {
 }
 
 .widget-hero-slider {
-  background: $content-background;
+  background: #fff;
   color: $main-background;
   height: 135%;
   width: 100%;
@@ -44,6 +44,7 @@ header {
         opacity: 0.5;
         font-weight: normal;
         user-select: none;
+        letter-spacing: 2.32px;
         @include bp(small) {
           text-align: center;
           font-weight: normal;
@@ -139,6 +140,7 @@ header {
 
     h1 {
       display: none;
+      margin-top: 5%;
     }
 
     h1.active {
@@ -162,7 +164,7 @@ header {
       }
 
       .hero-slider-mockup-container {
-        background-image: url("/themes/iplay/assets/images/two-screen-mockup.png");
+        background-image: url("/themes/iplay/assets/images/athletes-screens.jpg");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -254,7 +256,7 @@ header {
         .third-icon-contain {
           width: 75px;
           height: 75px;
-          border: 1px solid black;
+          border: 1px solid #3FBF55;
           background: $light-accent;
           border-radius: 50%;
           background-position: center;

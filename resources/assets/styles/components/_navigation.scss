@@ -48,6 +48,12 @@ header {
       display: none;
     }
 
+    .show-arrow::after {
+      content: url("/themes/iplay/assets/images/arrow-down.svg");
+      margin-left: -5px;
+      margin-right: 10px;
+    }
+
     .menu-menu-1-container {
       padding-right: 5%;
     }
@@ -96,23 +102,36 @@ header {
         z-index: 999;
       }
 
+      .menu-item {
+        &:hover {
+          a {
+            color: $main-accent;
+          }
+        }
+
+        .sub-menu {
+          a {
+            color: #fff;
+
+            &:hover {
+              color: $main-accent;
+            }
+          }
+        }
+
+        &:hover > .sub-menu {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
       .menu-item a {
         color: $main-light;
-        text-transform: uppercase;
         text-decoration: none;
         font-size: 16px;
         margin: 10px;
         @include bp(medium) {}
         @include bp(small) {}
-
-        &:hover {
-          color: $main-accent;
-        }
-
-        &:hover + .sub-menu {
-          visibility: visible;
-          opacity: 1;
-        }
       }
 
       .current_page_item a {
@@ -146,10 +165,8 @@ header {
 
       .language-icon {
         width: 30px;
-        height: 30px;
-        border: 1px solid white;
-        border-radius: 15px;
-        background-image: url("/themes/iplay/assets/images/gb.svg");
+        height: 20px;
+        background-image: url("/themes/iplay/assets/images/flag.svg");
         background-position: center;
         background-size: cover;
         border: none;

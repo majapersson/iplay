@@ -2,6 +2,7 @@
   height: 90%;
   width: 100%;
   background: #7557A9;
+  // background-image: linear-gradient(-180deg, #5A3C8E 0%, #9577C9 100%);
   box-sizing: border-box;
   position: relative;
   @include bp(medium) {
@@ -32,7 +33,7 @@
   .superusers-container {
     width: 60%;
     height: 60%;
-    margin: 2% auto 0;
+    margin: 3% auto 0;
     display: flex;
     position: relative;
     min-width: 700px;
@@ -79,9 +80,7 @@
         margin-right: auto;
         left: 0;
         right: 0;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+
         h1 {
           font-size: 40px;
           margin-top: 5px;
@@ -160,7 +159,7 @@
     right: 0;
     margin: auto;
     color: #fff;
-    bottom: 0;
+    bottom: 3%;
 
     p {
       text-align: center;

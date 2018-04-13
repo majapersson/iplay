@@ -3,7 +3,7 @@
   padding: 5% 5% 0;
   background: #375848;
   box-sizing: border-box;
-  background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.3) 0%, #000000 100%);
   overflow: hidden;
 
   .stars {
@@ -33,7 +33,7 @@
 
     .callout-left-section,
     .callout-right-section {
-      width: 60%;
+      width: 40%;
       height: 100%;
       @include bp(small) {
         width: 100%;
@@ -46,7 +46,8 @@
     h1 {
       font-size: 62px;
       margin-top: 15%;
-      width: 70%;
+      width: 90%;
+      margin-bottom: 5%;
       @include bp(small) {
         font-size: 42px;
         text-align: center;
@@ -62,8 +63,7 @@
     }
 
     .callout-description {
-      margin-top: 10%;
-      width: 65%;
+      width: 80%;
       @include bp(small) {
         width: 91%;
         margin: 0 auto;
@@ -74,6 +74,7 @@
 
       h4 {
         font-size: 22px;
+        margin: 0;
         letter-spacing: 1.08px;
         line-height: 46px;
         font-weight: normal;
@@ -82,6 +83,7 @@
         }
 
         p {
+          margin: 0;
           @include bp(small) {
             text-align: center;
           }
@@ -94,11 +96,10 @@
 
     .download-app-container {
       margin-top: 10%;
-      width: 55%;
+      width: 100%;
       height: 10%;
       display: flex;
       align-items: center;
-      justify-content: center;
       @include bp(small) {
         width: 100%;
       }
@@ -184,6 +185,7 @@
     .callout-right-section {
       padding: 5% 5% 5% 0;
       width: 40%;
+      padding-top: 0;
       box-sizing: border-box;
       @include bp(small) {
         width: 75%;
@@ -200,7 +202,7 @@
       .iphone-preview-container {
         width: 100%;
         height: 100%;
-        background-image: url("/themes/iplay/assets/images/iplay-phone-mockups.png");
+        background-image: url("/themes/iplay/assets/images/header-mockup.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
