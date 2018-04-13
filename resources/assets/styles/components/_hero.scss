@@ -28,13 +28,41 @@
     font-size: 1.4rem;
     letter-spacing: 0.41px;
     line-height: 2.2rem;
+    text-align: left;
     @include bp(small) {
       font-size: 1.2rem;
+      text-align: center;
+      padding: 0 1rem;
     };
   }
   &.small {
     margin: 5rem 0;
     position: relative;
     text-align: center;
+    width: 100%;
+  }
+  &__contact {
+    display: flex;
+    justify-content: center;
+    @include bp(small) {
+      flex-direction: column;
+    };
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1.5rem;
+      @include bp(small) {
+        margin: 0.5rem 0;
+      };
+
+      svg {
+        height: 2rem;
+        margin: 0 1.5rem;
+          path {
+          fill: $light-accent;
+        }
+      }
+    }
   }
 }

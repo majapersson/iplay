@@ -1,0 +1,43 @@
+.wpforms-container {
+  width: 80%;
+}
+
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+  @extend .button;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: $light-accent;
+    border: none;
+    filter: brightness(0.7);
+    transform: skew(160deg) scale(1.1);
+  }
+}
+
+div.wpforms-container-full .wpforms-form textarea, div.wpforms-container-full .wpforms-form input[type=text] {
+  color: $main-dark;
+  font-family: $font-default;
+  font-size: 0.78rem;
+  resize: none;
+  @include bp(small) {
+    width: 100%;
+  };
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-one-half {
+  @include bp(small) {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+  };
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
