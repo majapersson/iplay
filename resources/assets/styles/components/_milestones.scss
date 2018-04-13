@@ -56,33 +56,6 @@
 }
 
 .milestone {
-  &__title {
-    background-color: $purple-accent;
-    color: $main-light;
-    display: flex;
-    align-items: center;
-    padding: 0 2.1rem;
-    position: absolute;
-      top: -2rem;
-      left: -2rem;
-    transform: skew(-30deg);
-    height: 4rem;
-    width: 16rem;
-
-    @include bp(small) {
-      width: 70%;
-      left: -0.5rem;
-    };
-
-    p {
-      letter-spacing: 1px;
-      line-height: 1.3rem;
-      text-transform: uppercase;
-      transform: skew(30deg);
-      margin: 0;
-    }
-  }
-
   &__content {
     background-color: $main-light;
     color: $main-dark;
@@ -94,10 +67,43 @@
     position: relative;
     width: 18rem;
 
+    p {
+      margin-top: 1rem;
+      line-height: 1.3rem;
+    }
+
     @include bp(small) {
       margin-right: 1rem;
       width: 13rem;
     };
+  }
+
+  &__title {
+    background-color: $purple-accent;
+    color: $main-light;
+    display: flex;
+    align-items: center;
+    padding: 0 2.1rem;
+    position: absolute;
+      top: -2rem;
+      left: -2rem;
+    transform: skew(-$skew);
+    height: 4rem;
+    width: 16rem;
+
+    @include bp(small) {
+      padding: 0 1.4rem;
+      left: -1.2rem;
+      width: 85%;
+    };
+
+    p {
+      letter-spacing: 1px;
+      line-height: 1.3rem;
+      text-transform: uppercase;
+      transform: skew($skew);
+      margin: 0;
+    }
   }
 
   &__link {
@@ -142,7 +148,7 @@
     width: 0.7rem;
   }
   .currentDot {
-    transform: scale(2);
+    transform: scale(1.7);
   }
 }
 

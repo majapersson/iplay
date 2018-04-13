@@ -1,5 +1,5 @@
 .button {
-  background-color: $main-accent;
+  background-color: $light-accent;
   border: none;
   display: inline-block;
   text-decoration: none;
@@ -7,13 +7,23 @@
   padding: 1.5rem;
   width: auto;
 
-  p {
-    color: $main-light;
+  &__text, p {
+    color: $main-dark;
     font-family: $font-default;
     font-size: 1rem;
     letter-spacing: 1.6px;
     margin: 0;
     transform: skewX(20deg);
     text-transform: uppercase;
+  }
+}
+
+.link {
+  color: $main-dark;
+  &:hover {
+    color: $main-dark;
+  }
+  &:active {
+    color: $main-dark;
   }
 }

@@ -21,7 +21,7 @@ class Iplay_Widget_Hero extends Iplay_Widget
           ),
           'title' => array(
               'type'  => 'text',
-              'std'   => __('Hero', 'iplay'),
+              'std'   => '',
               'label' => __('Title:', 'iplay'),
           ),
           'description' => array(
@@ -30,7 +30,30 @@ class Iplay_Widget_Hero extends Iplay_Widget
               'std'   => null,
               'label' => __('Description:', 'iplay'),
           ),
+          'phone' => [
+                'type' => 'text',
+                'std' => '',
+                'label' => __('Phone number', 'iplay'),
+            ],
+            'mail' => [
+                'type' => 'text',
+                'std' => '',
+                'label' => __('Email', 'iplay'),
+            ],
       );
+
+        // if (isset($pagename) && $pagename === 'contact') {
+        //     $this->settings['phone'] = [
+        //                   'type' => 'text',
+        //                   'std' => '',
+        //                   'label' => __('Phone number', 'iplay'),
+        //               ];
+        //   $this->settings['mail'] = [
+        //                   'type' => 'text',
+        //                   'std' => '',
+        //                   'label' => __('Email', 'iplay'),
+        //               ];
+        // }
         parent::__construct();
     }
 
@@ -56,6 +79,8 @@ class Iplay_Widget_Hero extends Iplay_Widget
 
         $title = isset($instance['title']) ? $instance['title'] : null;
         $description = isset($instance['description']) ? $instance['description'] : '';
+        $phone = isset($instance['phone']) ? $instance['phone'] : '';
+        $mail = isset($instance['mail']) ? $instance['mail'] : '';
 
         echo $before_widget; ?>
 
@@ -65,6 +90,22 @@ class Iplay_Widget_Hero extends Iplay_Widget
         <h1 class="hero__title"><?php _e($title); ?></h1>
         <?php if (!empty($description)): ?>
             <p class="hero__text"><?php _e($description, 'iplay'); ?></p>
+        <?php endif; ?>
+        <?php if (!empty($phone) || !empty($mail)): ?>
+            <div class="hero__contact">
+                <?php if (!empty($phone)): ?>
+                    <div class="phone">
+                        <?php require template_path('assets/images/001-cell-phone.svg') ?>
+                        <?php _e($phone, 'iplay') ?>
+                    </div>
+                <?php endif;
+                 if (!empty($phone)): ?>
+                 <div class="mail">
+                     <?php require template_path('assets/images/002-black-envelope.svg') ?>
+                    <?php _e($mail, 'iplay') ?>
+                </div>
+                <?php endif; ?>
+            </div>
         <?php endif; ?>
     </div>
 </div>

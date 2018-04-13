@@ -19,6 +19,12 @@ class Iplay_Widget_Team extends Iplay_Widget
               'std' => __('Homepage/Widgetized', 'iplay'),
               'type' => 'widget-area',
           ),
+          'number' => [
+              'std' => 0,
+              'type' => 'number',
+              'description' => 'Number of coworkers displayed',
+              'label' => __('Coworkers'),
+              ],
       );
         parent::__construct();
     }
@@ -43,8 +49,10 @@ class Iplay_Widget_Team extends Iplay_Widget
 
         extract($args);
 
+        $number = isset($instance['number']) && $instance['number'] !== 0 ? $instance['number'] : -1;
+
         $posts = get_posts([
-            'numberposts' => '-1',
+            'numberposts' => $number,
             'order' => 'ASC',
             'post_type' => 'team_member',
         ]);
@@ -74,7 +82,7 @@ class Iplay_Widget_Team extends Iplay_Widget
                 </div>
             </div>
         <?php endforeach; ?>
-        <a href="#" class="button"><p><?php esc_html_e('Our developers', 'iplay') ?></p></a>
+        <p><a href="#" class="link"><?php esc_html_e('Our developers', 'iplay') ?></a> &darr;</p>
     </div>
 </div>
 
