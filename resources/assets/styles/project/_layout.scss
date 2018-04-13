@@ -2,10 +2,15 @@
   outline: none;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: $main-background;
   color: $main-light;
 }

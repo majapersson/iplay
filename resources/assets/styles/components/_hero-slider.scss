@@ -43,6 +43,7 @@ header {
         transform: skew(20deg);
         opacity: 0.5;
         font-weight: normal;
+        user-select: none;
         @include bp(small) {
           text-align: center;
           font-weight: normal;

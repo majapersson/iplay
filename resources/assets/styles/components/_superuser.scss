@@ -1,11 +1,172 @@
 .widget-superuser {
-  height: 80%;
+  height: 90%;
   width: 100%;
   background: #7557A9;
   box-sizing: border-box;
+  position: relative;
+  @include bp(medium) {
+    height: 85%;
+  }
+  @include bp(small) {
+    overflow: hidden;
+    height: 100%;
+  }
 
   #secondStars {
     height: 100%;
     width: 100%;
+    position: absolute;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 3%;
+    margin: 0;
+    position: relative;
+    font-size: 52px;
+    @include bp(small) {
+      font-size: 38px;
+    }
+  }
+
+  .superusers-container {
+    width: 60%;
+    height: 60%;
+    margin: 2% auto 0;
+    display: flex;
+    position: relative;
+    min-width: 700px;
+    @include bp(medium) {
+      width: 95%;
+      margin-top: 5%;
+    }
+    @include bp(small) {
+      position: absolute;
+      left: -9999px;
+      right: -9999px;
+      margin: 5% auto auto;
+      width: 750px;
+      height: 450px;
+    }
+
+    .first-superuser,
+    .second-superuser,
+    .third-superuser {
+      width: 30%;
+      height: 100%;
+      background: #fff;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      position: relative;
+
+      .superuser-picture {
+        height: 40%;
+        width: 100%;
+        box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+
+      .quote-icon {
+        height: 50px;
+        width: 50px;
+        background: $main-accent;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -25px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        h1 {
+          font-size: 40px;
+          margin-top: 5px;
+        }
+      }
+
+      .superuser-description {
+        width: 80%;
+        height: 30%;
+        box-sizing: border-box;
+        margin: 15% auto 0;
+        @include bp(medium) {
+          overflow: hidden;
+          word-break: break-all;
+        }
+
+        p {
+          color: #000;
+          text-align: center;
+          margin: 0;
+          hyphens: auto;
+        }
+      }
+
+      .superuser-name-team {
+        width: 100%;
+        height: 11%;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+
+        h4,
+        p {
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        h4 {
+          color: $main-accent;
+          font-size: 15px;
+          margin: 0;
+        }
+
+        p {
+          margin: 0;
+          color: #ABABAB;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .first-superuser {
+      .superuser-picture {
+        background-image: url("/themes/iplay/assets/images/Victor-Tomas-testimonial.jpg");
+      }
+    }
+
+    .second-superuser {
+      margin: 0 auto;
+
+      .superuser-picture {
+        background-image: url("/themes/iplay/assets/images/Niclas-Ekberg-testimonial.jpg");
+      }
+    }
+
+    .third-superuser {
+      .superuser-picture {
+        background-image: url("/themes/iplay/assets/images/Nathalie-Hagman-testimonial.jpg");
+      }
+    }
+  }
+
+  a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    bottom: 0;
+
+    p {
+      text-align: center;
+      @include bp(medium) {
+        font-size: 28px;
+      }
+    }
   }
 }
