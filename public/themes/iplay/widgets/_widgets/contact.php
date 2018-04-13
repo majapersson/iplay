@@ -19,10 +19,6 @@ class Iplay_Widget_Contact extends Iplay_Widget
               'std' => __('Homepage/Widgetized', 'iplay'),
               'type' => 'widget-area',
           ),
-<<<<<<< HEAD
-=======
-
->>>>>>> master
       );
         parent::__construct();
     }
