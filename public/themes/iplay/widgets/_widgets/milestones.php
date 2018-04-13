@@ -22,6 +22,7 @@ class Iplay_Widget_Milestones extends Iplay_Widget
           'title' => [
               'std' => __('Your hero title', 'iplay'),
               'type' => 'text',
+              'label' => __('Title:', 'iplay'),
               ]
       );
         parent::__construct();

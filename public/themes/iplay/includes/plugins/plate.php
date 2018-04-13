@@ -19,7 +19,6 @@ add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
     'index.php', // dashboard
     'link-manager.php', // links
-    'upload.php', // media
 ]);
 
 // Disable meta boxes in editor.
