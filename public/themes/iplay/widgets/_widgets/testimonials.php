@@ -56,6 +56,7 @@ class Iplay_Widget_Testimonials extends Iplay_Widget
         <?php foreach ($posts as $post):
             $fields = get_fields($post);
             $image = get_field('image', $post);
+            $media = get_field('media', $post);
             ?>
             <div class="user">
                 <div class="user__image">
