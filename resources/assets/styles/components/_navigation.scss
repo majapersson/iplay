@@ -1,3 +1,9 @@
+.fixed-header {
+  @include bp(small) {
+    position: fixed;
+  }
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -13,6 +19,8 @@ header {
     float: left;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 9999;
     @include bp(small) {
       display: block;
     }
@@ -173,16 +181,62 @@ header {
       top: 0;
       height: 100%;
       z-index: 999;
-      width: 75%;
+      width: 100%;
       background: $main-background;
       right: 0;
+      text-align: center;
+
+      .menu {
+        padding-left: 0;
+        padding-top: 5%;
+      }
+
+      a {
+        text-transform: uppercase;
+        line-height: 46px;
+        font-size: 22px;
+        text-decoration: none;
+      }
+
+      .sub-menu {
+        padding-left: 0;
+        padding-bottom: 5%;
+
+        a {
+          color: #4A4A4A;
+          font-size: 20px;
+          text-transform: none;
+        }
+      }
+
+      .get-the-app-button {
+        width: 55%;
+        height: 10%;
+        background: $light-accent;
+        transform: skew(160deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25% auto 0;
+        box-sizing: border-box;
+
+        p {
+          color: #000;
+          margin: 0;
+          font-size: 18px;
+          transform: skew(-160deg);
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
 
       ul {
         list-style-type: none;
 
         li {
           a {
-            color: $main-accent;
+            color: #fff;
+            font-size: 26px;
           }
         }
       }

@@ -27,6 +27,9 @@
   </span>
 </button>
 <div class="mobile-sub-menu">
+    <div class="get-the-app-button">
+        <p>Get the app</p>
+    </div>
         <?php wp_nav_menu(['theme_location' => 'primary-menu']);?>
 
 </div>
