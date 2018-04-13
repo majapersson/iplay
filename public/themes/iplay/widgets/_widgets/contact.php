@@ -19,7 +19,6 @@ class Iplay_Widget_Contact extends Iplay_Widget
               'std' => __('Homepage/Widgetized', 'iplay'),
               'type' => 'widget-area',
           ),
-
       );
         parent::__construct();
     }
@@ -44,10 +43,7 @@ class Iplay_Widget_Contact extends Iplay_Widget
 
         extract($args);
 
-        $text = isset($instance['text']) ? $instance['text'] : '';
-
         global $post;
-        // die(var_dump($post));
         echo $before_widget; ?>
 <div class="content contact">
     <div class="container">

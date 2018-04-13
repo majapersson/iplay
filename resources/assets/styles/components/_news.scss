@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem 0;
+  padding: 5rem 3rem;
   position: relative;
 
   .info {
@@ -12,14 +12,16 @@
   }
 
   &:after {
-    border: 1px solid $main-accent;
+    background-color: $light-accent;
     content: '';
+    height: 0.3rem;
     margin: auto;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 75%;
+    transform: skew(-$skew);
+    width: 50%;
   }
 
   &:first-of-type {
@@ -33,6 +35,6 @@
   }
 }
 
-.news button {
-  margin: 2rem 0;
+.news > p {
+  margin-top: 3rem;
 }

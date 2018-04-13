@@ -1,5 +1,15 @@
 .wpforms-container {
   width: 80%;
+  input, textarea {
+    color: $main-dark;
+    font-family: $font-default;
+    font-size: 0.78rem;
+    padding: 0.7rem 1rem;
+    resize: none;
+    @include bp(small) {
+      width: 100%;
+    };
+  }
 }
 
 .wpforms-submit-container {
@@ -7,7 +17,7 @@
   justify-content: center;
 }
 
-div.wpforms-container-full .wpforms-form button[type=submit] {
+.wpforms-submit {
   @extend .button;
   padding: 1rem 4rem;
   text-transform: uppercase;
@@ -21,17 +31,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
   }
 }
 
-div.wpforms-container-full .wpforms-form textarea, div.wpforms-container-full .wpforms-form input[type=text] {
-  color: $main-dark;
-  font-family: $font-default;
-  font-size: 0.78rem;
-  resize: none;
-  @include bp(small) {
-    width: 100%;
-  };
-}
-
-div.wpforms-container-full .wpforms-form .wpforms-one-half {
+.wpforms-one-half {
   @include bp(small) {
     margin: 0;
     padding: 10px 0;
