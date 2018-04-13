@@ -15,6 +15,12 @@ body {
   color: $main-light;
 }
 
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 .content {
   background-color: $main-light;
   color: $main-dark;
@@ -36,6 +42,6 @@ body {
     width: 65%;
   };
   @include bp(x-large) {
-    width: 60%;
+    width: 50%;
   };
 }

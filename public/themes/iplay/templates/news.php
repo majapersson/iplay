@@ -7,7 +7,6 @@ $news = new WP_query([
     'numberposts' => 5,
 ]);
 
-dynamic_sidebar('widget_area_news');
  ?>
 
 <main role="main" class="content">

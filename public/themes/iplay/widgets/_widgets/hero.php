@@ -30,11 +30,6 @@ class Iplay_Widget_Hero extends Iplay_Widget
               'std'   => null,
               'label' => __('Description:', 'iplay'),
           ),
-          'image' => [
-              'type' => 'image',
-              'std' => null,
-              'label' => __('Image:', 'iplay'),
-              ]
       );
         parent::__construct();
     }
@@ -61,15 +56,15 @@ class Iplay_Widget_Hero extends Iplay_Widget
 
         $title = isset($instance['title']) ? $instance['title'] : null;
         $description = isset($instance['description']) ? $instance['description'] : '';
-        $image = isset($instance['image']) ? $instance['image'] : null;
 
         echo $before_widget; ?>
 
-<div class="hero" <?php if (isset($image)): ?>style="background-image: url(<?php echo $image ?>)" <?php endif; ?>>
+<canvas id="stars" class="stars" data-color="#3FBF55" width="300" height="300"></canvas>
+<div class="hero">
     <div class="hero__content">
-        <h1 class="hero__title"><?php echo $title; ?></h1>
+        <h1 class="hero__title"><?php _e($title); ?></h1>
         <?php if (!empty($description)): ?>
-            <p class="hero__text"><?php echo $description; ?></p>
+            <p class="hero__text"><?php _e($description, 'iplay'); ?></p>
         <?php endif; ?>
     </div>
 </div>

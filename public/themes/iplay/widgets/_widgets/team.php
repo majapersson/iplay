@@ -49,8 +49,6 @@ class Iplay_Widget_Team extends Iplay_Widget
             'post_type' => 'team_member',
         ]);
 
-        // die(var_dump($posts));
-
         echo $before_widget; ?>
 
 <div class="content">
@@ -65,9 +63,9 @@ class Iplay_Widget_Team extends Iplay_Widget
                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $post->post_title ?>">
                 </div>
                 <div class="user__info">
-                    <h3><?php echo $post->post_title ?></h3>
-                    <p class="span"><?php echo $fields['title']; ?></p>
-                    <?php echo $fields['description']; ?>
+                    <h3><?php _e($post->post_title, 'iplay') ?></h3>
+                    <p class="span"><?php _e($fields['title'], 'iplay'); ?></p>
+                    <?php _e($fields['description'], 'iplay'); ?>
                     <div class="social">
                         <a href="<?php echo $media['twitter'] ?>"><?php require template_path('assets/images/social-media/003-twitter-logo-silhouette.svg') ?></a>
                         <a href="<?php echo $media['linkedin'] ?>"><?php require template_path('assets/images/social-media/001-linkedin.svg') ?></a>
@@ -76,7 +74,7 @@ class Iplay_Widget_Team extends Iplay_Widget
                 </div>
             </div>
         <?php endforeach; ?>
-        <a href="#" class="button"><p>Our developers</p></a>
+        <a href="#" class="button"><p><?php esc_html_e('Our developers', 'iplay') ?></p></a>
     </div>
 </div>
 
