@@ -25,7 +25,7 @@ $news = new WP_query([
                 <p>Nothing to see.</p>
             </article>
         <?php endif; ?>
-        <button class="button"><p>Load more posts</p></button>
+        <p><a href="#" class="link">Load more posts</a> &darr;</p>
     </div>
 </main>
 
