@@ -1,7 +1,5 @@
 .fixed-header {
-  @include bp(small) {
-    position: fixed;
-  }
+  position: fixed;
 }
 
 header {
@@ -196,6 +194,9 @@ header {
         line-height: 46px;
         font-size: 22px;
         text-decoration: none;
+        @include bp(medium) {
+          line-height: 66px;
+        }
       }
 
       .sub-menu {
@@ -206,6 +207,9 @@ header {
           color: #4A4A4A;
           font-size: 20px;
           text-transform: none;
+          @include bp(medium) {
+            font-size: 24px;
+          }
         }
       }
 
@@ -219,6 +223,11 @@ header {
         align-items: center;
         margin: 25% auto 0;
         box-sizing: border-box;
+        @include bp(medium) {
+          width: 40%;
+          height: 8%;
+          margin-top: 20%;
+        }
 
         p {
           color: #000;
@@ -227,6 +236,9 @@ header {
           transform: skew(-160deg);
           text-transform: uppercase;
           font-weight: bold;
+          @include bp(medium) {
+            font-size: 24px;
+          }
         }
       }
 
@@ -237,6 +249,9 @@ header {
           a {
             color: #fff;
             font-size: 26px;
+            @include bp(medium) {
+              font-size: 38px;
+            }
           }
         }
       }
