@@ -35,7 +35,7 @@ add_action('after_setup_theme', function () {
     // Add primary WordPress menu.
     register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
 });
-
+add_theme_support( 'menus' );
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
 

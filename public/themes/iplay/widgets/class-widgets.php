@@ -15,6 +15,7 @@ class Iplay_Widgets
           'milestones.php',
           'background.php',
           'contact.php',
+          'footer.php',
         );
 
         foreach ($widgets as $widget) {
@@ -37,6 +38,7 @@ class Iplay_Widgets
         register_widget('Iplay_Widget_Milestones');
         register_widget('Iplay_Widget_Background');
         register_widget('Iplay_Widget_Contact');
+        register_widget('Iplay_Widget_Footer');
     }
 
     public function register_sidebars()
@@ -53,5 +55,16 @@ class Iplay_Widgets
                      'after_title'   => '</h3>',
                  ));
                }
+               register_sidebar(array(
+                 'name'          => __('Footer Widget Area', 'iplay'),
+                 'id'            => 'widget-area-footer',
+                 'description'   => __('Choose what should display on the footer', 'iplay'),
+                 'before_widget' => '<section id="%1$s" class="widget widget-- %2$s">',
+                 'after_widget'  => '</section>',
+                 'before_title'  => '<h3 class="widget-footer-title">',
+                 'after_title'   => '</h3>',
+             ));
     }
+
+
 }

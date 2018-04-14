@@ -170,12 +170,10 @@ header {
         background-repeat: no-repeat;
         height: 100%;
         @include bp(small) {
-          background-image: url("/themes/iplay/assets/images/two-screen-mockup-mobile.png");
           height: 50%;
           width: 100%;
         }
         @include bp(medium) {
-          background-image: url("/themes/iplay/assets/images/two-screen-mockup-mobile.png");
           height: 70%;
           width: 100%;
         }
