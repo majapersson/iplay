@@ -21,6 +21,7 @@ header {
     z-index: 9999;
     @include bp(small) {
       display: block;
+      height: 85%;
     }
 
     a {
@@ -200,6 +201,7 @@ header {
       background: $main-background;
       right: 0;
       text-align: center;
+      overflow: scroll;
 
       .menu {
         padding-left: 0;
