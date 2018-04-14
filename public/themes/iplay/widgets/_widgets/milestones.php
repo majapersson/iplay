@@ -60,7 +60,7 @@ class Iplay_Widget_Milestones extends Iplay_Widget
 
     <div class="container">
         <section class="hero small">
-            <h1><?php _e($title, 'iplay') ?></h1>
+            <h1 class="hero__title"><?php _e($title, 'iplay') ?></h1>
         </section>
         <?php foreach ($posts as $post):
             $fields = get_fields($post);
