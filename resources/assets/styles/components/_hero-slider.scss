@@ -170,8 +170,9 @@ header {
         background-repeat: no-repeat;
         height: 100%;
         @include bp(small) {
-          height: 50%;
+          height: 55%;
           width: 100%;
+          background-image: url("/themes/iplay/assets/images/athletes-screens-mobile.jpg");
         }
         @include bp(medium) {
           height: 70%;
@@ -198,7 +199,6 @@ header {
 
         h4 {
           font-size: 22px;
-          word-break: break-all;
           @include bp(small) {
             font-size: 18px;
             width: 100%;
@@ -255,7 +255,7 @@ header {
           width: 75px;
           height: 75px;
           border: 1px solid #3FBF55;
-          background: $light-accent;
+          background: $main-accent;
           border-radius: 50%;
           background-position: center;
           background-size: 55%;
@@ -302,9 +302,10 @@ header {
             font-size: 16px;
             margin-left: 5%;
             width: 75%;
-            text-align: center;
+            text-align: left;
             @include bp(small) {
               margin-left: 0;
+              text-align: center;
             }
             @include bp(medium) {
               font-size: 20px;
