@@ -72,10 +72,6 @@ function draw(canvas, ctx, lines) {
   }
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  // if (canvas.width > 1024) {
-  //   window.requestAnimationFrame(() => draw(canvas, ctx, lines));
-  // }
 }
 
 (function () {
@@ -87,7 +83,6 @@ function draw(canvas, ctx, lines) {
     canvas.width = canvas.parentElement.clientWidth;
     canvas.height = canvas.parentElement.clientHeight;
     const lines = [];
-    // draw(canvas, ctx, lines);
 
     var fps = 15;
     var now;
@@ -105,7 +100,10 @@ function draw(canvas, ctx, lines) {
         draw(canvas, ctx, lines);
       }
     })();
-  })
+    window.addEventListener('resize', () => {
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+    });
 
-  window.addEventListener('resize', lineAnimation);
+  });
 })();
