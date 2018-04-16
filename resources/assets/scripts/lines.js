@@ -8,10 +8,10 @@ function draw(canvas, ctx, lines) {
   if (canvas.width <= 1024){
     count = 40;
   } else if (canvas.height > 700) {
-    count = 60;
+    count = 80;
   }
   else {
-    count = 50;
+    count = 70;
   }
   if (canvas.width < 600 || canvas.height > 700) {
     height = canvas.height / 5;
@@ -38,17 +38,13 @@ function draw(canvas, ctx, lines) {
       }
     }
 
-    if (lines[i].x + lines[i].width >= canvas.width) {
+    if (lines[i].y + lines[i].height >= canvas.height) {
+      lines[i].velocityY = -lines[i].velocityY;
       lines[i].velocityX = -lines[i].velocityX;
     }
-    if (lines[i].x <= 0) {
-      lines[i].velocityX = speed;
-    }
-    if (lines[i].y + lines[i].height >= canvas.height) {
-      lines[i].velocityY = -speed;
-    }
     if (lines[i].y <= 0) {
-      lines[i].velocityY = speed;
+      lines[i].velocityY = -lines[i].velocityY;
+      lines[i].velocityX = -lines[i].velocityX;
     }
 
     lines[i].x = lines[i].x + lines[i].velocityX;
@@ -104,6 +100,5 @@ function draw(canvas, ctx, lines) {
       canvas.width = canvas.parentElement.clientWidth;
       canvas.height = canvas.parentElement.clientHeight;
     });
-
   });
 })();
