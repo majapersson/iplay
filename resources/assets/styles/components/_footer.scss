@@ -12,6 +12,9 @@
   @include bp(small) {
     height: 835px;
   }
+  @include bp(landscape) {
+    height: auto;
+  };
 
   h1.widget-title {
     text-align: center;
@@ -20,6 +23,10 @@
     @include bp(small) {
       margin-top: 4%;
     }
+    @include bp(landscape) {
+      font-size: 45px;
+      margin-top: 4%;
+    };
   }
 
   h4.footer-description {
@@ -34,6 +41,9 @@
     @include bp(small) {
       width: 90%;
     }
+    @include bp(landscape) {
+      margin: 1rem 0;
+    };
   }
 
   input.footer-email {
@@ -52,6 +62,10 @@
       height: 7%;
       padding-left: 2%;
     }
+    @include bp(landscape) {
+      height: auto;
+      padding: .5rem;
+    };
   }
 
   ::placeholder {
@@ -112,6 +126,9 @@
       width: 90%;
       margin-top: 10%;
     }
+    @include bp(landscape) {
+      height: 1.5rem;
+    };
 
     a {
       width: 10%;
@@ -180,6 +197,9 @@
       width: 90%;
       margin-top: 10%;
     }
+    @include bp(landscape) {
+      margin-top: 5%;
+    };
 
     .menu-menu-1-container {
       width: 100%;
@@ -274,5 +294,8 @@
       position: absolute;
       bottom: 0;
     }
+    @include bp(landscape) {
+      margin-top: 5%;
+    };
   }
 }
