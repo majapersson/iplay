@@ -33,7 +33,7 @@
     }
     @include bp(landscape-mobile) {
       font-size: 32px;
-      padding-top: 0;
+      padding-top: 3%;
     }
   }
 
@@ -58,7 +58,7 @@
     }
     @include bp(landscape-mobile) {
       margin-top: 3%;
-      width: 90%;
+      width: 95%;
       height: 67%;
       min-width: inherit;
     }
@@ -75,6 +75,9 @@
       transition: all 0.3s;
       @include bp(small) {
         width: 2%;
+      }
+      @include bp(landscape-mobile) {
+        width: 32%;
       }
 
       &:hover {
@@ -122,8 +125,10 @@
           color: #000;
           text-align: center;
           margin: 0;
-          hyphens: auto;
-          font-size: 12px;
+          font-size: 18px;
+          @include bp(landscape-mobile) {
+            font-size: 12px;
+          }
         }
       }
 
