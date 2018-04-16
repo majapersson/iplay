@@ -3,7 +3,7 @@
   border: none;
   display: inline-block;
   text-decoration: none;
-  transform: skewX(-20deg);
+  transform: skewX(-$skew);
   padding: 1.5rem;
   width: auto;
 
@@ -13,8 +13,14 @@
     font-size: 1rem;
     letter-spacing: 1.6px;
     margin: 0;
-    transform: skewX(20deg);
+    transform: skewX($skew);
     text-transform: uppercase;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+    transform: perspective(1px) skewX(-$skew) scale(1.1);
   }
 }
 

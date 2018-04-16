@@ -8,8 +8,13 @@
   a svg {
     height: 1.5rem;
     margin: 0 1.5rem;
+    transition: all 0.2s ease-in-out;
     &:first-of-type {
       margin-left: 0;
+    }
+    &:hover {
+      filter: brightness(0.7);
+      transform: scale(1.1);
     }
     path {
       fill: $light-accent;

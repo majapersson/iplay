@@ -60,6 +60,10 @@
     @include bp(medium) {
       margin-bottom: 2rem;
     };
+    &.news {
+      margin: 0;
+      padding: 5rem 0;
+    }
   }
   &__contact {
     display: flex;
