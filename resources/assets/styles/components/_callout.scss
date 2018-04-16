@@ -62,6 +62,7 @@
       }
       @include bp(landscape-mobile) {
         font-size: 42px;
+        margin-top: 10%;
       }
     }
 
@@ -83,6 +84,10 @@
         font-weight: normal;
         @include bp(small) {
           font-size: 20px;
+        }
+        @include bp(landscape-mobile) {
+          font-size: 14px;
+          margin-top: 5%;
         }
 
         p {
@@ -111,6 +116,9 @@
         margin-top: 5%;
         display: flex;
         justify-content: center;
+      }
+      @include bp(landscape-mobile) {
+        height: 15%;
       }
 
       .app-store-box,
@@ -208,6 +216,9 @@
         margin-top: 5%;
         width: 65%;
         padding: 0;
+      }
+      @include bp(landscape-mobile) {
+        display: none;
       }
 
       .iphone-preview-container {

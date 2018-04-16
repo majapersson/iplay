@@ -12,6 +12,9 @@
     overflow: hidden;
     height: 667px;
   }
+  @include bp(landscape-mobile) {
+    height: 130%;
+  }
 
   #secondStars {
     height: 100%;
@@ -27,6 +30,10 @@
     font-size: 52px;
     @include bp(small) {
       font-size: 38px;
+    }
+    @include bp(landscape-mobile) {
+      font-size: 32px;
+      padding-top: 0;
     }
   }
 
@@ -48,6 +55,12 @@
       margin: 5% auto auto;
       width: 750px;
       height: 450px;
+    }
+    @include bp(landscape-mobile) {
+      margin-top: 3%;
+      width: 90%;
+      height: 67%;
+      min-width: inherit;
     }
 
     .first-superuser,
@@ -110,6 +123,7 @@
           text-align: center;
           margin: 0;
           hyphens: auto;
+          font-size: 12px;
         }
       }
 
@@ -119,6 +133,9 @@
         box-sizing: border-box;
         position: absolute;
         bottom: 0;
+        @include bp(landscape-mobile) {
+          bottom: 2%;
+        }
 
         h4,
         p {
@@ -180,6 +197,9 @@
       text-align: center;
       @include bp(medium) {
         font-size: 28px;
+      }
+      @include bp(landscape-mobile) {
+        font-size: 14px;
       }
     }
   }

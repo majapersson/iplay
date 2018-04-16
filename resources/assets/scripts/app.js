@@ -62,7 +62,7 @@ for (var i = 0; i < list.length; ++i) {
 
 }));
 
-  if ($(window).width() < 767) {
+  if ($(window).width() < 600) {
 $(document).ready(function(){
   $('.superusers-container').slick({
 infinite: true,

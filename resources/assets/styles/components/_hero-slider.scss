@@ -126,6 +126,10 @@ header {
     @include bp(small) {
       font-size: 42px;
     }
+    @include bp(landscape-mobile) {
+      font-size: 38px;
+      margin-bottom: 0;
+    }
   }
 
   .current-slide-container {
@@ -231,6 +235,9 @@ header {
           @include bp(medium) {
             font-size: 24px;
           }
+          @include bp(landscape-mobile) {
+            font-size: 22px;
+          }
         }
 
         h4.active {
@@ -289,6 +296,10 @@ header {
           @include bp(medium) {
             width: 100px;
             height: 100px;
+          }
+          @include bp(landscape-mobile) {
+            height: 60px;
+            width: 60px;
           }
         }
 
@@ -368,6 +379,9 @@ header {
             }
             @include bp(medium) {
               font-size: 20px;
+            }
+            @include bp(landscape-mobile) {
+              font-size: 16px;
             }
           }
 
