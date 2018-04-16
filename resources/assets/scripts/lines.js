@@ -6,9 +6,9 @@ function draw(canvas, ctx, lines) {
   let height;
   let width;
   if (canvas.width <= 1024){
-    count = 40;
+    count = 50;
   } else if (canvas.height > 700) {
-    count = 80;
+    count = 90;
   }
   else {
     count = 70;
