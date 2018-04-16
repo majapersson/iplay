@@ -58,7 +58,8 @@ class Iplay_Widget_Callout extends Iplay_Widget
         $description = isset($instance['description']) ? $instance['description'] : '';
 
         echo $before_widget; ?>
-        <canvas id="stars" class="stars" width="300" height="300" data-color="#00FF7B"></canvas>
+        <!-- <canvas id="stars" class="stars" width="300" height="300" data-color="#00FF7B"></canvas> -->
+        <canvas class="particles" data-color="#3FBF55"></canvas>
 <div class="container">
 <div class="callout-left-section">
     <h1 class="widget-title widget-title--home"><?php if ($title) {

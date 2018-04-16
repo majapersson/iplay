@@ -69,7 +69,8 @@ class Iplay_Widget_Superuser extends Iplay_Widget
 
             }
         </style>
-<canvas id="secondStars" class="stars" width="300" height="300" data-color="rgba(168, 140, 218, 0.2)"></canvas>
+<!-- <canvas id="secondStars" class="stars" width="300" height="300" data-color="rgba(168, 140, 218, 0.2)"></canvas> -->
+<canvas class="particles" data-color="#FFF" data-gradient="#9577C9, #5A3C8E"></canvas>
 <h1><?php echo $title ?></h1>
 <div class="superusers-container">
     <div class="first-superuser">

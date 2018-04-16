@@ -1,5 +1,5 @@
 .iplay_widget_hero {
-  background-image: linear-gradient(to bottom, rgba($main-accent, 0.2) 0%, #000000);
+  background-color: $dark-accent;
   color: $main-light;
   display: flex;
   flex-direction: column;
@@ -92,4 +92,10 @@
       }
     }
   }
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
