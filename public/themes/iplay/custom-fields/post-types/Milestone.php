@@ -19,6 +19,7 @@ acf_field_group([
             'label' => __('News Post'),
             'instructions' => __('Choose a news post to relate this milestone to'),
             'post_type' => 'post',
+            'allow_null' => true,
         ]),
     ],
     'style' => 'seamless',

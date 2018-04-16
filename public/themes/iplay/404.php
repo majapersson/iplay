@@ -3,10 +3,10 @@
     <canvas class="particles" data-color="#3FBF55"></canvas>
     <div class="hero">
         <div class="hero__title">
-            <h1>This is a new page</h1>
+            <h1>Oops...</h1>
         </div>
         <div class="hero__text">
-            <p>Start customizing your page by adding widgets in the customizer!</p>
+            <p>It looks like there's nothing here...</p>
         </div>
     </div>
 </main>

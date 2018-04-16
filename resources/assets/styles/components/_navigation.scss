@@ -21,8 +21,11 @@ header {
     z-index: 9999;
     @include bp(small) {
       display: block;
-      height: 85%;
+      height: 75%;
     }
+    @include bp(medium) {
+      height: 75%;
+    };
 
     a {
       height: 100%;

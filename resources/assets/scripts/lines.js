@@ -41,11 +41,11 @@ export default (function lineAnimation() {
         lines[i] = {
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          velocityX: speed * 0.7 * (Math.random() > 0.5 ? 1 : -1),
           velocityY: speed * 1.3 * (Math.random() > 0.5 ? 1 : -1),
+          velocityX: speed * 0.7 * (Math.random() > 0.5 ? 1 : -1),
           width: width * size,
           height: height * size,
-          opacity: Math.random() * (0.7 - 0.1) + 0.1,
+          opacity: Math.random() * (0.5 - 0.1) + 0.1,
         }
       }
 
