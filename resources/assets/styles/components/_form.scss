@@ -5,6 +5,7 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
     font-family: $font-default;
     font-size: 0.78rem;
+    letter-spacing: 1px;
     padding: 0.7rem 1rem;
     resize: none;
     @include bp(small) {
