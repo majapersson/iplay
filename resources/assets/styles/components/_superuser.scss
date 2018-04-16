@@ -4,12 +4,13 @@
   background-image: linear-gradient(-180deg, #5A3C8E 0%, #9577C9 100%);
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
   @include bp(medium) {
     height: 85%;
   }
   @include bp(small) {
     overflow: hidden;
-    height: 100%;
+    height: 667px;
   }
 
   #secondStars {
@@ -59,10 +60,16 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       position: relative;
       transition: all 0.3s;
+      @include bp(small) {
+        width: 2%;
+      }
 
       &:hover {
-        transform: scale(1.1);
+        transform: perspective(1px) scale(1.1);
         cursor: pointer;
+        @include bp(small) {
+          transform: none;
+        }
       }
 
       .superuser-picture {
@@ -138,6 +145,10 @@
     }
 
     .first-superuser {
+      @include bp(small) {
+        margin-left: 20px;
+      }
+
       .superuser-picture {
         background-image: url("/themes/iplay/assets/images/Victor-Tomas-testimonial.jpg");
       }
@@ -145,6 +156,9 @@
 
     .second-superuser {
       margin: 0 auto;
+      @include bp(small) {
+        margin: 0 20px;
+      }
 
       .superuser-picture {
         background-image: url("/themes/iplay/assets/images/Niclas-Ekberg-testimonial.jpg");

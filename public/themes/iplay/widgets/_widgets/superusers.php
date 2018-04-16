@@ -64,11 +64,7 @@ class Iplay_Widget_Superuser extends Iplay_Widget
 
 
         echo $before_widget; ?>
-        <style>
-            .first-superuser .superuser-picture {
 
-            }
-        </style>
 <canvas id="secondStars" class="stars" width="300" height="300" data-color="rgba(168, 140, 218, 0.2)"></canvas>
 <h1><?php echo $title ?></h1>
 <div class="superusers-container">
@@ -109,8 +105,8 @@ class Iplay_Widget_Superuser extends Iplay_Widget
         </div>
     </div>
 </div>
-
     <a href=""><p>View all of our superusers</p></a>
+
 
   <?php
         echo $after_widget;

@@ -70,12 +70,19 @@ class Iplay_Widget_Callout extends Iplay_Widget
 
 
     <div class="download-app-container">
-        <div class="google-play-box">
-            <p>Google Play</p>
-        </div>
-        <div class="app-store-box">
-            <p>App Store</p>
-        </div>
+
+            <div class="google-play-box">
+                        <a href="market://details?id=com.iplay">
+                <p>Google Play</p>
+                </a>
+            </div>
+
+    <div class="app-store-box">
+        <a href="itms-apps://itunes.apple.com/se/app/iplay-sport/id1068927526?l=en&mt=8">
+    <p>App Store</p>
+    </a>
+</div>
+
     </div>
     </div>
     <div class="callout-right-section">

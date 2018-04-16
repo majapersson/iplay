@@ -44,6 +44,7 @@ header {
         opacity: 0.5;
         font-weight: normal;
         user-select: none;
+        pointer-events: none;
         letter-spacing: 2.32px;
         @include bp(small) {
           text-align: center;
@@ -164,7 +165,7 @@ header {
       }
 
       .hero-slider-mockup-container {
-        background-image: url("/themes/iplay/assets/images/athletes-screens.jpg");
+        display: none;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -172,12 +173,32 @@ header {
         @include bp(small) {
           height: 55%;
           width: 100%;
-          background-image: url("/themes/iplay/assets/images/athletes-screens-mobile.jpg");
         }
         @include bp(medium) {
           height: 70%;
           width: 100%;
         }
+      }
+
+      .hero-slider-mockup-container.fans {
+        background-image: url("/themes/iplay/assets/images/fans-screens.jpg");
+      }
+
+      .hero-slider-mockup-container.athletes {
+        background-image: url("/themes/iplay/assets/images/athletes-screens.jpg");
+        @include bp(small) {
+          background-image: url("/themes/iplay/assets/images/athletes-screens-mobile.jpg");
+        }
+      }
+
+      .hero-slider-mockup-container.other {
+        background-image: url("/themes/iplay/assets/images/other-screens.jpg");
+      }
+
+      .hero-slider-mockup-container.athletes.active,
+      .hero-slider-mockup-container.fans.active,
+      .hero-slider-mockup-container.other.active {
+        display: block !important;
       }
 
       .hero-slider-description-container {
@@ -199,6 +220,7 @@ header {
 
         h4 {
           font-size: 22px;
+          display: none;
           @include bp(small) {
             font-size: 18px;
             width: 100%;
@@ -209,6 +231,10 @@ header {
           @include bp(medium) {
             font-size: 24px;
           }
+        }
+
+        h4.active {
+          display: block;
         }
       }
     }
@@ -266,20 +292,52 @@ header {
           }
         }
 
-        .first-icon-contain {
+        .first-icon-contain.fans {
+          background-image: url("/themes/iplay/assets/images/follow.svg");
+        }
+
+        .first-icon-contain.athletes {
           background-image: url("/themes/iplay/assets/images/connect.svg");
         }
 
-        .second-icon-contain {
+        .first-icon-contain.other {
+          background-image: url("/themes/iplay/assets/images/find-talents.svg");
+        }
+
+        .second-icon-contain.fans {
+          background-image: url("/themes/iplay/assets/images/news.svg");
+        }
+
+        .second-icon-contain.athletes {
           background-image: url("/themes/iplay/assets/images/camera.svg");
         }
 
-        .third-icon-contain {
+        .second-icon-contain.other {
+          background-image: url("/themes/iplay/assets/images/marketing.svg");
+        }
+
+        .third-icon-contain.fans {
           background-image: url("/themes/iplay/assets/images/social-networks.svg");
         }
 
-        .fourth-icon-contain {
+        .third-icon-contain.athletes {
+          background-image: url("/themes/iplay/assets/images/social-networks.svg");
+        }
+
+        .third-icon-contain.other {
+          background-image: url("/themes/iplay/assets/images/resume.svg");
+        }
+
+        .fourth-icon-contain.fans {
           background-image: url("/themes/iplay/assets/images/notification.svg");
+        }
+
+        .fourth-icon-contain.athletes {
+          background-image: url("/themes/iplay/assets/images/notification.svg");
+        }
+
+        .fourth-icon-contain.other {
+          background-image: url("/themes/iplay/assets/images/spread-info.svg");
         }
 
         .hero-slider-bottom-icon-container,
@@ -303,6 +361,7 @@ header {
             margin-left: 5%;
             width: 75%;
             text-align: left;
+            display: none;
             @include bp(small) {
               margin-left: 0;
               text-align: center;
@@ -310,6 +369,10 @@ header {
             @include bp(medium) {
               font-size: 20px;
             }
+          }
+
+          p.active {
+            display: block;
           }
         }
 
