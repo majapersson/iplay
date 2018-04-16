@@ -13,6 +13,9 @@
   @include bp(small) {
     height: 800px;
   }
+  @include bp(landscape-mobile) {
+    height: 375px;
+  }
 
   .container {
     margin-top: 4%;
