@@ -26,6 +26,9 @@ header {
     @include bp(medium) {
       height: 75%;
     };
+    @include bp(landscape) {
+      height: 100%;
+    }
 
     a {
       height: 100%;

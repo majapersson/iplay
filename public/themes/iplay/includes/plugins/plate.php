@@ -19,7 +19,7 @@ add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
     'index.php', // dashboard
     'link-manager.php', // links
-    'admin.php?page=wpforms-overview',
+    // 'admin.php?page=wpforms-overview',
 ]);
 
 // Disable meta boxes in editor.

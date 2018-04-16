@@ -58,8 +58,8 @@ class Iplay_Widget_Callout extends Iplay_Widget
         $description = isset($instance['description']) ? $instance['description'] : '';
 
         echo $before_widget; ?>
-        <!-- <canvas id="stars" class="stars" width="300" height="300" data-color="#00FF7B"></canvas> -->
         <canvas class="particles" data-color="#3FBF55"></canvas>
+        <!-- <canvas id="stars" class="stars" width="300" height="300" data-color="#00FF7B"></canvas> -->
 <div class="container">
 <div class="callout-left-section">
     <h1 class="widget-title widget-title--home"><?php if ($title) {
@@ -73,13 +73,13 @@ class Iplay_Widget_Callout extends Iplay_Widget
     <div class="download-app-container">
 
             <div class="google-play-box">
-                        <a href="market://details?id=com.iplay">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.iplay">
                 <p>Google Play</p>
                 </a>
             </div>
 
     <div class="app-store-box">
-        <a href="itms-apps://itunes.apple.com/se/app/iplay-sport/id1068927526?l=en&mt=8">
+        <a target="_blank" href="https://itunes.apple.com/se/app/iplay-sport/id1068927526?l=en&mt=8">
     <p>App Store</p>
     </a>
 </div>

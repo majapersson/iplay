@@ -3,24 +3,29 @@
     @media (max-width: 649px) {
       @content;
     }
-  } @else
+  } @else 
   if $point == medium {
     @media (min-width: 650px) and (max-width: 1300px) {
       @content;
     }
-  } @else
+  } @else 
   if $point == large {
     @media (min-width: 1301px) {
       @content;
     }
-  } @else
+  } @else 
   if $point == x-large {
     @media (min-width: 1600px) {
       @content;
     }
-  } @else
+  } @else 
   if $point == landscape {
     @media (orientation: landscape) {
+      @content;
+    }
+  } @else 
+  if $point == landscape-mobile {
+    @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
       @content;
     }
   }
