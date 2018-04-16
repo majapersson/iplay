@@ -64,8 +64,6 @@ class Iplay_Widget_Superuser extends Iplay_Widget
 
 
         echo $before_widget; ?>
-        <style>
-            .first-superuser .superuser-picture {
 
             }
         </style>
@@ -110,8 +108,8 @@ class Iplay_Widget_Superuser extends Iplay_Widget
         </div>
     </div>
 </div>
-
     <a href=""><p>View all of our superusers</p></a>
+
 
   <?php
         echo $after_widget;

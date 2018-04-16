@@ -122,6 +122,11 @@ div[id*="widget-area-page"] .iplay-widget-usage.widgetized {
 					<p class="iplay-widget-usage <?php echo $key; ?>"><em><?php printf(__('Only for use in the <strong>%s</strong> widget area.', 'iplay'), $setting['std']); ?></em></p>
 				<?php
                 break;
+                case 'widget-section':
+                ?>
+					<p class="iplay-widget-section <?php echo $key; ?>"><em><?php printf(__('<strong>%s</strong> widget area.', 'iplay'), $setting['std']); ?></em></p>
+				<?php
+                break;
                 case 'description':
                     $value = $setting['std'];
                     ?>
