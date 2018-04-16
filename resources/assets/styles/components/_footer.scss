@@ -21,7 +21,7 @@
     font-size: 60px;
     margin-bottom: 0;
     @include bp(small) {
-      margin-top: 4%;
+      font-size: 35px;
     }
     @include bp(landscape) {
       font-size: 45px;
@@ -50,6 +50,7 @@
     width: 40%;
     height: 5%;
     margin: 0 auto;
+    font-family: $font-default;
     font-size: 14px;
     color: #000;
     padding-left: 1%;
