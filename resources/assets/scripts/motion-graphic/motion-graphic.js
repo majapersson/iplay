@@ -1,20 +1,12 @@
-
 // Settings
-var particleCount = 40,
+var particleCount = 35,
 flareCount = 0,
 motion = 0.05,
-tilt = 0.05,
+tilt = 0,
 particleSizeBase = 1,
 particleSizeMultiplier = 0.5,
 flareSizeBase = 100,
 flareSizeMultiplier = 100,
-lineWidth = 1,
-linkChance = 75, // chance per frame of link, higher = smaller chance
-linkLengthMin = 5, // min linked vertices
-linkLengthMax = 7, // max linked vertices
-linkOpacity = 0.25; // number between 0 & 1
-linkFade = 90, // link fade-out frames
-linkSpeed = 0, // distance a link travels in 1 frame
 glareAngle = -60,
 glareOpacityMultiplier = 0.4,
 renderParticles = true,
@@ -28,7 +20,7 @@ blurSize = 0,
 orbitTilt = true,
 randomMotion = true,
 noiseLength = 1000,
-noiseStrength = 3;
+noiseStrength = 8;
 
 document.querySelectorAll('.stars').forEach(canvas => {
   var context = canvas.getContext('2d'),
@@ -40,7 +32,7 @@ document.querySelectorAll('.stars').forEach(canvas => {
   n = 0,
   nAngle = (Math.PI * 2) / noiseLength,
   nRad = 100,
-  nScale = 0.5,
+  nScale = 1,
   nPos = {x: 0, y: 0},
   points = [],
   vertices = [],
@@ -82,7 +74,7 @@ document.querySelectorAll('.stars').forEach(canvas => {
 
     var tri = [];
     for (i = 0; i < vertices.length; i++) {
-      if (tri.length == 3) {
+      if (tri.length == 2) {
         triangles.push(tri);
         tri = [];
       }
@@ -107,7 +99,7 @@ document.querySelectorAll('.stars').forEach(canvas => {
       }
     }
 
-    var fps = 15;
+    var fps = 60;
     var now;
     var then = Date.now();
     var interval = 1000/fps;
@@ -187,32 +179,15 @@ document.querySelectorAll('.stars').forEach(canvas => {
 
     if (renderParticleGlare) {
       context.globalAlpha = o * glareOpacityMultiplier;
-
-      context.ellipse(pos.x, pos.y, r * 100, r, (glareAngle - ((nPos.x - 0.5) * noiseStrength * motion)) * (Math.PI / 180), 0, 2 * Math.PI, false);
-      context.fill();
+      // Set the transformation before drawing the glare
+      context.setTransform(1, 0, (glareAngle/100), 1, 0, 0);
+      // Draw the glare
+      context.fillRect(pos.x, pos.y, r * noiseStrength, r * 100);
       context.closePath();
     }
 
     context.globalAlpha = 1;
   };
-
-  // Flare class
-
-
-  // Link class
-  var Link = function(startVertex, numPoints) {
-    this.length = numPoints;
-    this.verts = [startVertex];
-    this.stage = 0;
-    this.linked = [startVertex];
-    this.distances = [];
-    this.traveled = 0;
-    this.fade = 0;
-    this.finished = false;
-  };
-
-
-
 
   // Utils
 
