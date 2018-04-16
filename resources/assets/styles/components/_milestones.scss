@@ -8,14 +8,21 @@
   @include bp(small) {
     padding: 2rem 0;
   };
+  @include bp(medium) {
+    padding: 2rem 0;
+  };
 
   &--end {
     @extend .milestone__wrapper;
     flex-direction: column;
     position: relative;
+    margin-bottom: 1rem;
     @include bp(small) {
       padding: 0;
     }
+    @include bp(medium) {
+      padding: 0;
+    };
     .timeline {
       position: static;
       height: 30%;
@@ -25,6 +32,9 @@
 
   &:nth-of-type(odd) {
     justify-content: flex-end;
+    @include bp(medium) {
+      justify-content: center;
+    };
     .timeline {
       order: -1;
       @include bp(small) {
@@ -37,6 +47,9 @@
     @include bp(small) {
       justify-content: flex-end;
     };
+    @include bp(medium) {
+      justify-content: center;
+    };
   }
   &:first-of-type {
     .timeline {
@@ -48,14 +61,12 @@
       }
     }
   }
-  &:last-of-type {
-    .timeline {
-
-    }
-  }
 }
 
 .milestone {
+  @include bp(medium) {
+    margin-left: 5rem;
+  };
   &__content {
     background-color: $main-light;
     color: $main-dark;
@@ -135,6 +146,9 @@
 
   @include bp(small) {
     margin-left: 2rem;
+  };
+  @include bp(medium) {
+    margin-left: 10vw;
   };
 
   .dot {

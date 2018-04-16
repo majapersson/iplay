@@ -19,6 +19,7 @@ add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
     'index.php', // dashboard
     'link-manager.php', // links
+    'admin.php?page=wpforms-overview',
 ]);
 
 // Disable meta boxes in editor.
@@ -70,7 +71,7 @@ add_theme_support('plate-disable-tabs', ['help', 'screen-options']);
 add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
-add_theme_support('plate-login-logo', asset('assets/images/logo.png'));
+add_theme_support('plate-login-logo', asset('assets/images/Iplay-logo-green.svg'), 200);
 
 // Set custom footer text.
 add_theme_support('plate-footer-text', 'Thank you for creating with <a href="https://wordplate.github.io">WordPlate</a>.');

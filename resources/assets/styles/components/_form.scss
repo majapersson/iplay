@@ -10,6 +10,26 @@
       width: 100%;
     };
   }
+
+  .wpforms-title {
+    @extend h2;
+    text-align: center;
+    margin-bottom: 2rem;
+    @include bp(small) {
+      margin-bottom: 1rem;
+    };
+  }
+
+  .wpforms-one-half {
+    @include bp(small) {
+      margin: 0;
+      padding: 10px 0;
+      width: 100%;
+    };
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .wpforms-submit-container {
@@ -23,21 +43,4 @@
   text-transform: uppercase;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
-  &:hover {
-    background-color: $light-accent;
-    border: none;
-    filter: brightness(0.7);
-    transform: skew(160deg) scale(1.1);
-  }
-}
-
-.wpforms-one-half {
-  @include bp(small) {
-    margin: 0;
-    padding: 10px 0;
-    width: 100%;
-  };
-  &:last-of-type {
-    padding-bottom: 0;
-  }
 }

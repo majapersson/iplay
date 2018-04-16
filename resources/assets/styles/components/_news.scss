@@ -5,6 +5,19 @@
   padding: 5rem 3rem;
   position: relative;
 
+  @include bp(small) {
+    padding: 2rem 1rem;
+  };
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    color: $main-dark;
+    text-decoration: none;
+  }
+
   .info {
     display: flex;
     justify-content: space-around;

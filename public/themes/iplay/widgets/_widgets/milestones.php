@@ -60,7 +60,7 @@ class Iplay_Widget_Milestones extends Iplay_Widget
 
     <div class="container">
         <section class="hero small">
-            <h1><?php _e($title, 'iplay') ?></h1>
+            <h1 class="hero__title"><?php _e($title, 'iplay') ?></h1>
         </section>
         <?php foreach ($posts as $post):
             $fields = get_fields($post);
@@ -72,7 +72,9 @@ class Iplay_Widget_Milestones extends Iplay_Widget
                             <p ><?php _e($post->post_title, 'iplay') ?></p>
                         </div>
                         <p><?php _e($fields['description'], 'iplay'); ?></p>
-                        <a href="#" class="milestone__link">Read more &rarr;</a>
+                        <?php if (!empty($fields['news_link'])): ?>
+                        <a href="<?php the_permalink($fields['news_link']) ?>" class="milestone__link">Read more &rarr;</a>
+                        <?php endif; ?>
                     </div>
                     <p class="milestone__date"><?php _e($fields['date'], 'iplay'); ?></p>
                 </div>

@@ -44,7 +44,9 @@ class Iplay_Widget_Background extends Iplay_Widget
         extract($args);
 
         echo $before_widget; ?>
-<canvas id="stars" class="stars" data-color="#375CE2" width="300" height="300"></canvas>
+<!-- <canvas id="stars" class="stars" data-color="#375CE2" width="300" height="300"></canvas> -->
+
+<canvas class="particles" data-color="#384dff"></canvas>
 
   <?php
         echo $after_widget;

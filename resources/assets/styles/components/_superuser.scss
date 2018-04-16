@@ -104,10 +104,6 @@
         height: 30%;
         box-sizing: border-box;
         margin: 15% auto 0;
-        @include bp(medium) {
-          overflow: hidden;
-          word-break: break-all;
-        }
 
         p {
           color: #000;

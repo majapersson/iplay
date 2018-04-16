@@ -1,4 +1,5 @@
 import './milestones.js';
+import './lines.js';
 
 // Look for .hamburger
 var hamburger = document.querySelector(".hamburger");

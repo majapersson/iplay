@@ -1,5 +1,5 @@
 .iplay_widget_hero {
-  background-image: linear-gradient(to bottom, rgba($main-accent, 0.2) 0%, #000000);
+  background-color: $dark-accent;
   color: $main-light;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,11 @@
     height: 90vh;
   };
 
+  @include bp(medium) {
+    height: auto;
+    padding: 10vh 0;
+  };
+
   #stars {
     z-index: 0;
   }
@@ -24,6 +29,11 @@
   &__content {
     text-align: center;
   }
+  &__title {
+    @include bp(medium) {
+      font-size: 2.5rem;
+    };
+  }
   &__text {
     font-size: 1.4rem;
     letter-spacing: 0.41px;
@@ -34,12 +44,26 @@
       text-align: center;
       padding: 0 1rem;
     };
+    @include bp(medium) {
+      font-size: 1.2rem;
+      text-align: center;
+    };
   }
   &.small {
     margin: 5rem 0;
     position: relative;
     text-align: center;
     width: 100%;
+    @include bp(small) {
+      margin-bottom: 2rem;
+    };
+    @include bp(medium) {
+      margin-bottom: 2rem;
+    };
+    &.news {
+      margin: 0;
+      padding: 5rem 0;
+    }
   }
   &__contact {
     display: flex;
@@ -59,10 +83,19 @@
       svg {
         height: 2rem;
         margin: 0 1.5rem;
+        @include bp(medium) {
+          margin: 0 1rem;
+        };
           path {
           fill: $light-accent;
         }
       }
     }
   }
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
