@@ -15,7 +15,7 @@ $news = new WP_query([
         $category = get_the_category()[0];
         ?>
             <article class="news-item">
-                <h3><?php the_title(); ?></h3>
+                <h3><a href="<?php the_permalink($post->ID) ?>"><?php the_title(); ?></a></h3>
                 <p class="span">Posted in <?php echo $category->name; ?> on <?php the_time('j F Y'); ?></p>
 
                 <?php the_content(); ?>
