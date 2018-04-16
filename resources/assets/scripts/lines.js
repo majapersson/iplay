@@ -31,7 +31,7 @@ function draw(canvas, ctx, lines) {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         velocityY: velocity,
-        velocityX: -velocity * 0.3,
+        velocityX: -velocity * 0.25,
         width: width * size,
         height: height * size,
         opacity: Math.random() * (0.5 - 0.1) + 0.1,
