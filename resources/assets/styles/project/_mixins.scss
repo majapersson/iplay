@@ -18,5 +18,10 @@
     @media (min-width: 1600px) {
       @content;
     }
+  } @else
+  if $point == landscape {
+    @media (orientation: landscape) {
+      @content;
+    }
   }
 }
