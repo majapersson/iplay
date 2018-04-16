@@ -15,13 +15,23 @@ acf_field_group([
         ]),
         acf_image([
             'name' => 'image',
-            'label' => __('Image'),
+            'label' => __('Profile Image'),
+            'instructions' => __('Image for profile on superuser page'),
+        ]),
+        acf_image([
+            'name' => 'thumb',
+            'label' => __('Quote Image'),
+            'instructions' => __('Image for front page superuser section'),
         ]),
         acf_wysiwyg([
             'name' => 'description',
             'label' => __('Testimonial'),
             'media_upload' => false,
             'toolbar' => 'basic',
+        ]),
+        acf_text([
+            'name' => 'quote',
+            'label' => __('Quote'),
         ]),
         acf_group([
             'name' => 'media',
