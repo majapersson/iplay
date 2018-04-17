@@ -46,11 +46,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/scripts/slick.js', array(), null, true );
     wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
     wp_enqueue_script('wordplate');
-    // wp_enqueue_script( 'delaunay', get_template_directory_uri() . '/assets/scripts/motion-graphic/delaunay.js', array(), '1.0.0', true );
-    // wp_enqueue_script( 'require', get_template_directory_uri() . '/assets/scripts/motion-graphic/require.js', array(), '1.0.0', true );
-    // wp_enqueue_script( 'motion-graphic', get_template_directory_uri() . '/assets/scripts/motion-graphic/motion-graphic.js', array(), '1.0.0', true );
-
-
 });
 
 
@@ -71,15 +66,6 @@ add_filter('excerpt_more', function () {
 add_filter('excerpt_length', function () {
     return 101;
 });
-
-// Functions for translating theme
-load_theme_textdomain('Iplay', '/languages');
-
-$locale = get_locale();
-$locale_file = "/languages/$locale.php";
-if (is_readable($locale_file)) {
-    require_once($locale_file);
-}
 
 class Iplay
 {

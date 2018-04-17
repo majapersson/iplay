@@ -99,11 +99,9 @@ header {
     }
 
     .second-button {
-      &:hover {}
-
       h4 {
         @include bp(small) {
-          width: 70%;
+          width: 100%;
         }
       }
     }

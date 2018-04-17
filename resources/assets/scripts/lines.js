@@ -26,7 +26,7 @@ function draw(canvas, ctx, lines) {
   for (var i = 0; i < count; i++) {
     const size = Math.random() + 0.5;
     if (lines[i] === undefined || lines[i] === null) {
-      const velocity = speed * 1.3 * (Math.random() > 0.5 ? 1 : -1);
+      const velocity = speed * (Math.random(1.5 - 0.5) + 0.5) * (Math.random() > 0.5 ? 1 : -1);
       lines[i] = {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,

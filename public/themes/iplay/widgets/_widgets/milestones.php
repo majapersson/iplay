@@ -50,7 +50,7 @@ class Iplay_Widget_Milestones extends Iplay_Widget
 
         $posts = get_posts([
             'numberposts' => '-1',
-            'order' => 'ASC',
+            'order' => 'DESC',
             'post_type' => 'milestone',
         ]);
 
@@ -83,11 +83,6 @@ class Iplay_Widget_Milestones extends Iplay_Widget
                 </div>
             </div>
         <?php endforeach; ?>
-        <div class="milestone__wrapper--end">
-            <div class="timeline"></div>
-            <div class="timeline"></div>
-            <div class="timeline"></div>
-        </div>
     </div>
 
   <?php
